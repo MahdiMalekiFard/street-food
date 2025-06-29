@@ -23,6 +23,7 @@ return new class extends Migration
             $table->text('languages')->nullable(); // ['fa', 'en']
             $table->boolean('published')->default(BooleanEnum::DISABLE->value);
             $table->schemalessAttributes('extra_attributes');
+            $table->foreignId('base_id')->constrained()->cascadeOnDelete();
             $table->softDeletes();
             $table->timestamps();
         });

@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace App\Models;
 
 use App\Enums\BooleanEnum;
+use App\Traits\HasBase;
 use App\Traits\HasTranslationAuto;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
@@ -22,12 +23,13 @@ use Spatie\SchemalessAttributes\SchemalessAttributesTrait;
 class Menu extends Model implements HasMedia
 {
     use HasFactory;
+    use HasBase;
     use HasTranslationAuto;
     use InteractsWithMedia;
     use SchemalessAttributesTrait;
 
     protected $fillable = [
-        'published', 'languages'
+        'published', 'languages', 'base_id',
     ];
 
     protected $casts = [

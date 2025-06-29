@@ -1,5 +1,18 @@
 <?php
 return [
+    'bases' => [
+        [
+            'title'       => 'pizza',
+            'description' => 'pizza is good',
+            'image'       => public_path('img/blog/blog-01.jpg'),
+        ],
+        [
+            'title'       => 'sandwich',
+            'description' => 'sandwich is good',
+            'image'       => public_path('img/blog/blog-01.jpg'),
+        ],
+    ],
+
     'sliders' => [
         [
             'title'       => 'Det er tid til at smage ægte italiensk mad',
@@ -46,6 +59,7 @@ return [
             'seo_description' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque fringilla semper nulla in pulvinar.',
             'published'       => true,
             'languages'       => ['en'],
+            'base_id'         => 1,
             'image'           => public_path('img/portfolio/gallery-1.jpg'),
         ],
         [
@@ -78,6 +92,7 @@ return [
             'seo_description' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque fringilla semper nulla in pulvinar.',
             'published'       => true,
             'languages'       => ['en'],
+            'base_id'         => 1,
             'image'           => public_path('img/portfolio/gallery-2.jpg'),
         ],
         [
@@ -110,6 +125,7 @@ return [
             'seo_description' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque fringilla semper nulla in pulvinar.',
             'published'       => true,
             'languages'       => ['en'],
+            'base_id'         => 1,
             'image'           => public_path('img/portfolio/gallery-3.jpg'),
         ],
         [
@@ -142,6 +158,7 @@ return [
             'seo_description' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque fringilla semper nulla in pulvinar.',
             'published'       => true,
             'languages'       => ['en'],
+            'base_id'         => 1,
             'image'           => public_path('img/portfolio/gallery-4.jpg'),
         ],
         [
@@ -174,6 +191,7 @@ return [
             'seo_description' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque fringilla semper nulla in pulvinar.',
             'published'       => true,
             'languages'       => ['en'],
+            'base_id'         => 2,
             'image'           => public_path('img/portfolio/gallery-5.jpg'),
         ],
         [
@@ -206,6 +224,7 @@ return [
             'seo_description' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque fringilla semper nulla in pulvinar.',
             'published'       => true,
             'languages'       => ['en'],
+            'base_id'         => 2,
             'image'           => public_path('img/portfolio/gallery-6.jpg'),
         ],
     ],

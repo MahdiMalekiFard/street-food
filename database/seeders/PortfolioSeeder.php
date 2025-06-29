@@ -19,11 +19,11 @@ class PortfolioSeeder extends Seeder
         $data = require database_path('seeders/data/cafe.php');
 
         $category = StoreCategoryAction::run([
-            'published'   => 1,
-            'type'        => CategoryTypeEnum::PORTFOLIO,
-            'title'       => 'From Beans to Bistro',
-            'description' => 'Welcome to More Than a Meal — Welcome to an Experience',
-            'body'        => '
+            'published'       => 1,
+            'type'            => CategoryTypeEnum::PORTFOLIO,
+            'title'           => 'From Beans to Bistro',
+            'description'     => 'Welcome to More Than a Meal — Welcome to an Experience',
+            'body'            => '
 <p>
     What sets us apart? It starts with our coffee. Sourced from ethically grown beans and roasted with precision,
     every cup tells the story of farmers, roasters, and baristas who care. But we’re not just about caffeine —
@@ -32,8 +32,8 @@ class PortfolioSeeder extends Seeder
     here for every palate.
 </p>
             ',
-            'slug' => 'From-Beans-to-Bistro',
-            'seo_title' => 'From Beans to Bistro',
+            'slug'            => 'From-Beans-to-Bistro',
+            'seo_title'       => 'From Beans to Bistro',
             'seo_description' => 'Welcome to More Than a Meal — Welcome to an Experience',
         ]);
 
@@ -45,6 +45,7 @@ class PortfolioSeeder extends Seeder
                 'description'     => $row['description'],
                 'slug'            => $row['slug'],
                 'body'            => $row['body'],
+                'base_id'         => $row['base_id'],
                 'seo_title'       => $row['seo_title'],
                 'seo_description' => $row['seo_description'],
                 'published'       => $row['published'],

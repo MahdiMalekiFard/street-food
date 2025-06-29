@@ -34,6 +34,7 @@ class StorePortfolioAction
      *     tags_id:array<integer>,
      *     seo_title:string,
      *     seo_description:string,
+     *     base_id:int,
      *     published:boolean,
      * } $payload
      * @return Portfolio
@@ -43,7 +44,7 @@ class StorePortfolioAction
     {
         return DB::transaction(function () use ($payload) {
             /** @var Portfolio $model */
-            $model = $this->repository->store(Arr::only($payload, ['published', 'seo_title', 'seo_description', 'slug']));
+            $model = $this->repository->store(Arr::only($payload, ['published', 'seo_title', 'seo_description', 'slug', 'base_id']));
             $this->syncTranslationAction->handle($model, Arr::only($payload, ['title', 'description', 'body']));
             $model->categories()->sync(Arr::get($payload, 'categories_id', []));
             $model->tags()->sync(Arr::get($payload, 'tags_id', []));

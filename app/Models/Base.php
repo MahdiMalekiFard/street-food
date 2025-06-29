@@ -5,52 +5,33 @@ declare(strict_types=1);
 namespace App\Models;
 
 use App\Enums\BooleanEnum;
-use App\Traits\HasBase;
-use App\Traits\HasCategories;
-use App\Traits\HasSlugFromTranslationTitle;
-use App\Traits\HasView;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use App\Traits\HasTranslationAuto;
-use Illuminate\Database\Eloquent\SoftDeletes;
 use Spatie\Image\Enums\Fit;
 use Spatie\MediaLibrary\HasMedia;
 use Spatie\MediaLibrary\InteractsWithMedia;
-use Spatie\SchemalessAttributes\SchemalessAttributesTrait;
-use Spatie\Tags\HasTags;
 
 /**
  * @property string $title
  */
-class Portfolio extends Model implements HasMedia
+class Base extends Model implements HasMedia
 {
     use HasFactory;
     use HasTranslationAuto;
     use InteractsWithMedia;
-    use HasBase;
-    use SoftDeletes;
-    use HasSlugFromTranslationTitle;
-    use SchemalessAttributesTrait;
-    use HasCategories;
-    use HasView;
-    use HasTags;
 
     protected $fillable = [
-        'published', 'slug', 'seo_title', 'seo_description', 'languages', 'total_view', 'base_id',
+        'published'
     ];
 
     protected $casts = [
-        'published'        => BooleanEnum::class,
-        'languages'        => 'array',
-        'extra_attributes' => 'array',
-        'created_at'       => 'datetime',
-        'updated_at'       => 'datetime',
-        'deleted_at'       => 'datetime',
+        'published' => BooleanEnum::class
     ];
 
     public array $translatable = [
-        'title', 'description', 'body'
+        'title','description'
     ];
 
     /*

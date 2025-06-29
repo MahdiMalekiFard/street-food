@@ -11,13 +11,13 @@ return new class extends Migration {
      */
     public function up(): void
     {
-        Schema::create('menus', function (Blueprint $table) {
+        Schema::create('bases', function (Blueprint $table) {
             $table->id();
-            // translation: title, description
-            $table->foreignId('base_id')->constrained()->cascadeOnDelete();
-            $table->text('languages')->nullable(); // ['fa', 'en']
+
+            // translations: title, description
+            $table->text('languages')->nullable(); // ['de', 'en']
             $table->boolean('published')->default(BooleanEnum::DISABLE->value);
-            $table->schemalessAttributes('extra_attributes');
+
             $table->timestamps();
         });
     }
@@ -27,6 +27,6 @@ return new class extends Migration {
      */
     public function down(): void
     {
-        Schema::dropIfExists('menus');
+        Schema::dropIfExists('bases');
     }
 };

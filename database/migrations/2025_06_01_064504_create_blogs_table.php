@@ -22,7 +22,7 @@ return new class extends Migration {
             $table->unsignedBigInteger('total_view')->default(0);
             $table->unsignedBigInteger('total_comment')->default(0);
             $table->unsignedBigInteger('total_like')->default(0);
-            $table->text('languages')->nullable(); // ['fa', 'en']
+            $table->text('languages')->nullable(); // ['de', 'en']
             $table->schemalessAttributes('extra_attributes');
             $table->softDeletes();
             $table->timestamps();

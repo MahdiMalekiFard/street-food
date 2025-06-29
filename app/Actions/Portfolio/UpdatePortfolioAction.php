@@ -36,6 +36,7 @@ class UpdatePortfolioAction
      *     tags_id:array<integer>,
      *     seo_title:string,
      *     seo_description:string,
+     *     base_id:int,
      *     published:boolean,
      * }                $payload
      * @return Portfolio
@@ -44,7 +45,7 @@ class UpdatePortfolioAction
     public function handle(Portfolio $portfolio, array $payload): Portfolio
     {
         return DB::transaction(function () use ($portfolio, $payload) {
-            $this->repository->update($portfolio, Arr::only($payload, ['published', 'seo_title', 'seo_description', 'slug']));
+            $this->repository->update($portfolio, Arr::only($payload, ['published', 'seo_title', 'seo_description', 'slug', 'base_id']));
             $this->syncTranslationAction->handle($portfolio, Arr::only($payload, ['title', 'description', 'body']));
             $portfolio->categories()->sync(Arr::get($payload, 'categories_id', []));
             $portfolio->tags()->sync(Arr::get($payload, 'tags_id', []));
