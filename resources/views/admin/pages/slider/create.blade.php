@@ -3,7 +3,18 @@
     :title="trans('general.page.create.page_title',['model'=>trans('slider.model')])">
     <x-admin.widget.form-card
         :title="trans('general.page.create.title',['model'=>trans('slider.model')])"
-        :action="route('admin.slider.store')">
+        :action="route('admin.slider.store')"
+        :multipart="1"
+    >
+        <input hidden name="locale" value="{{app()->getLocale()}}"/>
+
+        <x-admin.element.select
+            parent-class="col-lg-12"
+            :label="trans('validation.attributes.base_category')"
+            name="base_id"
+            :options="$bases"
+            required="1"
+        />
 
         <x-admin.element.input
             parent-class="col-lg-12"
@@ -23,7 +34,8 @@
             parent-class="col-md-12"
             :label="trans('validation.attributes.image')"
             helper-label="1280*720"
-            name="image"/>
+            name="image"
+        />
 
         @slot('footer')
             <x-admin.widget.form-sumbit :back-route="route('admin.slider.index')"/>

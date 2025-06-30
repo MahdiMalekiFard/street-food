@@ -20,7 +20,6 @@ return [
     'likes'                        => 'Likes',
     'opinions'                     => 'Opinions',
     'slider'                       => 'Slider',
-    'base_categories'              => 'Base Categories',
     'gallery'                      => 'Gallery',
     'categories'                   => 'Categories',
     'pages'                        => 'Pages',

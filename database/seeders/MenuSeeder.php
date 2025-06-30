@@ -23,6 +23,7 @@ class MenuSeeder extends Seeder
                 'published'   => $row['published'],
                 'title'       => $row['title'],
                 'description' => $row['description'],
+                'base_id'     => $row['base_id'],
             ]);
 
             try {

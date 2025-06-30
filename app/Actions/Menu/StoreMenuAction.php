@@ -24,7 +24,15 @@ class StoreMenuAction
     }
 
     /**
-     * @param array{title:string,description:string,image:string,left_image:string,right_image:string,published:boolean} $payload
+     * @param array{
+     *     title:string,
+     *     description:string,
+     *     image:string,
+     *     left_image:string,
+     *     right_image:string,
+     *     published:boolean,
+     *     base_id:int,
+     * } $payload
      * @return Menu
      * @throws Throwable
      */
@@ -32,7 +40,7 @@ class StoreMenuAction
     {
         return DB::transaction(function () use ($payload) {
             /** @var Menu $model */
-            $model = $this->repository->store(Arr::only($payload, ['published']));
+            $model = $this->repository->store(Arr::only($payload, ['published', 'base_id']));
             $this->syncTranslationAction->handle($model, Arr::only($payload, ['title', 'description']));
             $this->fileService->addMedia($model);
             $this->fileService->addMedia($model, 'left_image', 'left_image');

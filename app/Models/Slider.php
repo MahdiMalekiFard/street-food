@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace App\Models;
 
 use App\Enums\BooleanEnum;
+use App\Traits\HasBase;
 use App\Traits\HasTranslationAuto;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
@@ -18,12 +19,14 @@ use Spatie\MediaLibrary\InteractsWithMedia;
 class Slider extends Model implements HasMedia
 {
     use HasFactory;
+    use HasBase;
     use InteractsWithMedia;
     use HasTranslationAuto;
 
     protected $fillable = [
         'languages',
-        'published'
+        'published',
+        'base_id',
     ];
 
     protected $casts = [

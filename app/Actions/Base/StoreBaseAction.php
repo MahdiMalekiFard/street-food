@@ -4,7 +4,7 @@ namespace App\Actions\Base;
 
 use App\Actions\Translation\SyncTranslationAction;
 use App\Models\Base;
-use App\Repositories\Base\BaseCategoryRepositoryInterface;
+use App\Repositories\BaseCategory\BaseCategoryRepositoryInterface;
 use App\Services\File\FileService;
 use Illuminate\Support\Arr;
 use Illuminate\Support\Facades\DB;
@@ -27,6 +27,7 @@ class StoreBaseAction
      * @param array{
      *     title:string,
      *     description:string,
+     *     published:bool,
      *     image:string,
      * } $payload
      * @return Base
@@ -36,7 +37,7 @@ class StoreBaseAction
     {
         return DB::transaction(function () use ($payload) {
             /** @var Base $model */
-            $model = $this->repository->store($payload);
+            $model = $this->repository->store(Arr::only($payload, ['published']));
             $this->syncTranslationAction->handle($model, Arr::only($payload, ['title', 'description']));
 
             $this->fileService->addMedia($model);

@@ -33,6 +33,7 @@ class UpdateMenuAction
      *     image:string,
      *     left_image:string,
      *     right_image:string,
+     *     base_id:int,
      *     } $payload
      * @return Menu
      * @throws Throwable
@@ -40,7 +41,7 @@ class UpdateMenuAction
     public function handle(Menu $menu, array $payload): Menu
     {
         return DB::transaction(function () use ($menu, $payload) {
-            $this->repository->update($menu, Arr::only($payload, ['published']));
+            $this->repository->update($menu, Arr::only($payload, ['published', 'base_id']));
             $this->syncTranslationAction->handle($menu, Arr::only($payload, ['title', 'description']));
             $this->fileService->addMedia($menu);
             $this->fileService->addMedia($menu, 'left_image', 'left_image');

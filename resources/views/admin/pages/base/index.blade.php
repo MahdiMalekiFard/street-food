@@ -3,6 +3,8 @@
         var datatable_url = '/admin/base';
         var datatable_columns = [
             {data: 'id', name: 'id'},
+            {data: 'title', name: 'title'},
+            {data: 'created_at', name: 'created_at'},
             {data: 'actions', name: 'actions', orderable: false, searchable: false, width: '1%'}
         ];
     </script>
@@ -12,8 +14,10 @@
     :title="trans('general.page.index.title',['model'=>trans('base.model')])">
 
     <x-admin.widget.datatable
-            :rows="[
+        :rows="[
                     trans('datatable.id'),
+                    trans('datatable.title'),
+                    trans('datatable.created_at'),
                     trans('datatable.actions'),
             ]"
         :actions="[

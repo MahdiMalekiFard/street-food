@@ -18,6 +18,7 @@ class DatabaseSeeder extends Seeder
             RolePermissionSeeder::class,
             UserSeeder::class,
             PageSeeder::class,
+            BaseSeeder::class,
             SliderSeeder::class,
             OpinionSeeder::class,
             PortfolioSeeder::class,

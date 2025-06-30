@@ -7,8 +7,10 @@ namespace App\Http\Controllers\Admin;
 use App\Actions\Slider\DeleteSliderAction;
 use App\Actions\Slider\StoreSliderAction;
 use App\Actions\Slider\UpdateSliderAction;
+use App\Enums\BooleanEnum;
 use App\Http\Requests\StoreSliderRequest;
 use App\Http\Requests\UpdateSliderRequest;
+use App\Models\Base;
 use App\Models\Slider;
 use App\Yajra\Column\CreatedAtColumn;
 use App\Yajra\Column\TitleColumn;
@@ -49,7 +51,11 @@ class SliderController extends BaseWebController
      */
     public function create()
     {
-        return view('admin.pages.slider.create');
+        $bases = Base::query()->where('published', BooleanEnum::ENABLE)->get()->mapWithKeys(function ($item) {
+            return [$item->id => $item->title];
+        });
+
+        return view('admin.pages.slider.create', compact('bases'));
     }
 
     /**
@@ -82,7 +88,11 @@ class SliderController extends BaseWebController
      */
     public function edit(Slider $slider)
     {
-        return view('admin.pages.slider.edit', compact('slider'));
+        $bases = Base::query()->where('published', BooleanEnum::ENABLE)->get()->mapWithKeys(function ($item) {
+            return [$item->id => $item->title];
+        });
+
+        return view('admin.pages.slider.edit', compact('slider', 'bases'));
     }
 
     /**

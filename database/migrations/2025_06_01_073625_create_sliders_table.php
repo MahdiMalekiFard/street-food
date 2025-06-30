@@ -13,6 +13,7 @@ return new class extends Migration {
     {
         Schema::create('sliders', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('base_id')->constrained()->cascadeOnDelete();
             $table->boolean('published')->default(BooleanEnum::ENABLE->value);
             $table->text('languages')->nullable(); // ['fa', 'en']
             $table->schemalessAttributes('extra_attributes');

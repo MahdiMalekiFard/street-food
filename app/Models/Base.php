@@ -23,11 +23,12 @@ class Base extends Model implements HasMedia
     use InteractsWithMedia;
 
     protected $fillable = [
-        'published'
+        'published', 'languages',
     ];
 
     protected $casts = [
-        'published' => BooleanEnum::class
+        'published' => BooleanEnum::class,
+        'languages' => 'array',
     ];
 
     public array $translatable = [

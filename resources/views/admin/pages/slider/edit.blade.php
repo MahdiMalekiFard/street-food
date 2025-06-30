@@ -4,7 +4,19 @@
     <x-admin.widget.form-card
         :title="trans('general.page.edit.title',['model'=>trans('slider.model'),'name'=>$slider->title])"
         :action="route('admin.slider.update',$slider->id)"
-        method="PATCH">
+        method="PATCH"
+        :multipart="1"
+    >
+        <input hidden name="locale" value="{{app()->getLocale()}}"/>
+
+        <x-admin.element.select
+            parent-class="col-lg-12"
+            :label="trans('validation.attributes.base_category')"
+            name="base_id"
+            :options="$bases"
+            :value="$slider->base?->id"
+            required="1"
+        />
 
         <x-admin.element.input
             parent-class="col-lg-12"

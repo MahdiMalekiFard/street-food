@@ -24,7 +24,12 @@ class StoreSliderAction
     }
 
     /**
-     * @param array{title:string,description:string} $payload
+     * @param array{
+     *     title:string,
+     *     description:string,
+     *     published:bool,
+     *     base_id:int,
+     * } $payload
      * @return Slider
      * @throws Throwable
      */
@@ -32,7 +37,7 @@ class StoreSliderAction
     {
         return DB::transaction(function () use ($payload) {
             /** @var Slider $model */
-            $model = $this->repository->store(Arr::only($payload, ['published']));
+            $model = $this->repository->store(Arr::only($payload, ['published', 'base_id']));
             $this->syncTranslationAction->handle($model, Arr::only($payload, ['title', 'description']));
             $this->fileService->addMedia($model);
 

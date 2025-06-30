@@ -26,15 +26,20 @@ class UpdateSliderAction
 
     /**
      * @param Slider                                 $slider
-     * @param array{title:string,description:string} $payload
+     * @param array{
+     *     title:string,
+     *     description:string,
+     *     published:bool,
+     *     base_id:int,
+     * } $payload
      * @return Slider
      * @throws Throwable
      */
     public function handle(Slider $slider, array $payload): Slider
     {
         return DB::transaction(function () use ($slider, $payload) {
-            $this->repository->update($slider, $payload);
-            $this->syncTranslationAction->handle($slider, Arr::only($payload, ['title', 'description', 'body']));
+            $this->repository->update($slider, Arr::only($payload, ['published', 'base_id']));
+            $this->syncTranslationAction->handle($slider, Arr::only($payload, ['title', 'description']));
             $this->fileService->addMedia($slider);
 
             return $slider->refresh();

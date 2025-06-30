@@ -1,14 +1,19 @@
 <?php
+
+use App\Enums\BooleanEnum;
+
 return [
     'bases' => [
         [
             'title'       => 'pizza',
             'description' => 'pizza is good',
+            'published'   => true,
             'image'       => public_path('img/blog/blog-01.jpg'),
         ],
         [
             'title'       => 'sandwich',
             'description' => 'sandwich is good',
+            'published'   => true,
             'image'       => public_path('img/blog/blog-01.jpg'),
         ],
     ],
@@ -18,12 +23,14 @@ return [
             'title'       => 'Det er tid til at smage ægte italiensk mad',
             'description' => 'Trænger du til lækker Paris mad? Måske er du i humør til en saftig bøf? Uanset hvilken slags måltid du har i tankerne.',
             'published'   => true,
+            'base_id'     => 1,
             'image'       => public_path('img/slider/img_slider_1.jpg'),
         ],
         [
             'title'       => 'Det er tid til at smage ægte italiensk mad',
             'description' => 'Trænger du til lækker Paris mad? Måske er du i humør til en saftig bøf? Uanset hvilken slags måltid du har i tankerne.',
             'published'   => true,
+            'base_id'     => 2,
             'image'       => public_path('img/slider/img_slider_2.jpg'),
         ],
     ],
@@ -234,6 +241,7 @@ return [
             'title'       => 'Særlig menu',
             'description' => 'Kreativitet møder kulinarisk ekspertise',
             'published'   => 1,
+            'base_id'     => 1,
             'image'       => public_path('img/menu/menu-zz-1.jpg'),
             'left_image'  => public_path('img/menu/menu.jpg'),
             'right_image' => public_path('img/menu/menu1.jpg'),
@@ -242,6 +250,7 @@ return [
             'title'       => 'Hoved menu',
             'description' => 'Hjertet i vores café-restaurant',
             'published'   => 1,
+            'base_id'     => 1,
             'image'       => public_path('img/menu/menu-zz-2.jpg'),
             'left_image'  => public_path('img/menu/menu1.jpg'),
             'right_image' => public_path('img/menu/menu.jpg'),
@@ -250,6 +259,7 @@ return [
             'title'       => 'Fisk og skaldyr',
             'description' => 'Frisk fra havet til din tallerken',
             'published'   => 1,
+            'base_id'     => 2,
             'image'       => public_path('img/menu/menu-zz-3.jpg'),
             'left_image'  => public_path('img/menu/menu.jpg'),
             'right_image' => public_path('img/menu/menu1.jpg'),
@@ -258,6 +268,7 @@ return [
             'title'       => 'Dessert',
             'description' => 'Søde afslutninger og overbærende begyndelser',
             'published'   => 1,
+            'base_id'     => 2,
             'image'       => public_path('img/menu/menu3.jpg'),
             'left_image'  => public_path('img/menu/menu1.jpg'),
             'right_image' => public_path('img/menu/menu.jpg'),

@@ -20,6 +20,7 @@ class BaseSeeder extends Seeder
             $base = StoreBaseAction::run([
                 'title'       => $row['title'],
                 'description' => $row['description'],
+                'published'   => $row['published'],
             ]);
 
             try {

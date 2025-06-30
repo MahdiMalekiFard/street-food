@@ -15,6 +15,7 @@ class RepositoryServiceProvider extends ServiceProvider
         $directories = array_diff(scandir($path, SCANDIR_SORT_NONE), ['.', '..', 'BaseRepository.php', 'BaseRepositoryInterface.php']);
 
         foreach ($directories as $directory) {
+
             $interface      = 'App\Repositories\\' . $directory . '\\' . $directory . 'RepositoryInterface';
             $implementation = 'App\Repositories\\' . $directory . '\\' . $directory . 'Repository';
             $this->app->singleton($interface, $implementation);

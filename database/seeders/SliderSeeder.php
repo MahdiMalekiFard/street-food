@@ -22,6 +22,7 @@ class SliderSeeder extends Seeder
                 'title'       => $row['title'],
                 'description' => $row['description'],
                 'published'   => $row['published'],
+                'base_id'     => $row['base_id'],
             ]);
 
             try {

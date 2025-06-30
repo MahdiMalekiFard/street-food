@@ -125,6 +125,13 @@
                 ])
 
                 @include('admin.layout.partials.sidebar.menu.sub-menu',[
+                    'title' => trans('_menu.base_categories'),
+                    'icon' => 'fad fa-hammer fs-2',
+                    'route' => route('admin.base.index'),
+                    'has_permission' => true,
+                ])
+
+                @include('admin.layout.partials.sidebar.menu.sub-menu',[
                     'title' => trans('_menu.slider'),
                     'icon' => 'fad fa-images fs-2',
                     'route' => route('admin.slider.index'),

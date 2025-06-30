@@ -15,6 +15,7 @@ return new class extends Migration
         Schema::create('art_galleries', function (Blueprint $table) {
             $table->id();
             // translations : title, description
+            $table->foreignId('base_id')->constrained()->cascadeOnDelete();
             $table->text('languages')->nullable(); // ['da', 'en']
             $table->timestamps();
         });

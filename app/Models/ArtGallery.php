@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace App\Models;
 
+use App\Traits\HasBase;
 use App\Traits\HasTranslationAuto;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
@@ -17,13 +18,14 @@ use Spatie\MediaLibrary\InteractsWithMedia;
 class ArtGallery extends Model implements HasMedia
 {
     use HasFactory;
+    use HasBase;
     use HasTranslationAuto;
     use InteractsWithMedia;
 
     protected $table = 'art_galleries';
 
     protected $fillable = [
-        'languages',
+        'languages', 'base_id',
     ];
 
     protected function casts(): array

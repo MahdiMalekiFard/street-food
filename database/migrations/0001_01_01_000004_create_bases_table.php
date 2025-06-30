@@ -16,7 +16,7 @@ return new class extends Migration {
 
             // translations: title, description
             $table->text('languages')->nullable(); // ['de', 'en']
-            $table->boolean('published')->default(BooleanEnum::DISABLE->value);
+            $table->boolean('published')->default(BooleanEnum::ENABLE->value);
 
             $table->timestamps();
         });

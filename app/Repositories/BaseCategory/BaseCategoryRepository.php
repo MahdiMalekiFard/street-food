@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace App\Repositories\Base;
+namespace App\Repositories\BaseCategory;
 
 use App\Filters\FuzzyFilter;
 use App\Models\Base;

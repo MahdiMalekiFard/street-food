@@ -10,6 +10,10 @@ use App\Actions\Base\UpdateBaseAction;
 use App\Http\Requests\StoreBaseRequest;
 use App\Http\Requests\UpdateBaseRequest;
 use App\Models\Base;
+use App\Yajra\Column\ActionColumn;
+use App\Yajra\Column\CreatedAtColumn;
+use App\Yajra\Column\TitleColumn;
+use App\Yajra\Filter\TitleFilter;
 use Exception;
 use Illuminate\Contracts\Foundation\Application;
 use Illuminate\Contracts\View\Factory;
@@ -29,9 +33,10 @@ class BaseController extends BaseWebController
         if ($request->ajax()) {
             return Datatables::of(Base::query())
                              ->addIndexColumn()
-                             ->addColumn('actions', function ($row) {
-                                 return view('admin.pages.base.index_options', ['row' => $row]);
-                             })
+                             ->addColumn('actions', new ActionColumn('admin.pages.base.index_options'))
+                             ->addColumn('title', new TitleColumn)
+                             ->filterColumn('title', new TitleFilter)
+                             ->addColumn('created_at', new CreatedAtColumn)
                              ->orderColumns(['id'], '-:column $1')
                              ->make(true);
         }
@@ -64,7 +69,7 @@ class BaseController extends BaseWebController
      */
     public function show(Base $base)
     {
-        return view('admin.pages.base.show',compact('base'));
+        return view('admin.pages.base.show', compact('base'));
     }
 
     /**
@@ -76,7 +81,7 @@ class BaseController extends BaseWebController
      */
     public function edit(Base $base)
     {
-        return view('admin.pages.base.edit',compact('base'));
+        return view('admin.pages.base.edit', compact('base'));
     }
 
     /**
@@ -89,7 +94,7 @@ class BaseController extends BaseWebController
      */
     public function update(UpdateBaseRequest $request, Base $base)
     {
-        UpdateBaseAction::run($base,$request->validated());
+        UpdateBaseAction::run($base, $request->validated());
         return redirect(route('admin.base.index'))->withToastSuccess(trans('general.update_success', ['model' => trans('base.model')]));
     }
 
