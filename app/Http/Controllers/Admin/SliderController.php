@@ -6,6 +6,7 @@ namespace App\Http\Controllers\Admin;
 
 use App\Actions\Slider\DeleteSliderAction;
 use App\Actions\Slider\StoreSliderAction;
+use App\Actions\Slider\ToggleSliderAction;
 use App\Actions\Slider\UpdateSliderAction;
 use App\Enums\BooleanEnum;
 use App\Http\Requests\StoreSliderRequest;
@@ -13,6 +14,7 @@ use App\Http\Requests\UpdateSliderRequest;
 use App\Models\Base;
 use App\Models\Slider;
 use App\Yajra\Column\CreatedAtColumn;
+use App\Yajra\Column\PublishedColumn;
 use App\Yajra\Column\TitleColumn;
 use App\Yajra\Filter\TitleFilter;
 use Exception;
@@ -40,6 +42,7 @@ class SliderController extends BaseWebController
                              ->addColumn('title', new TitleColumn)
                              ->addColumn('base_category', fn($row) => $row->base?->title)
                              ->filterColumn('title', new TitleFilter)
+                             ->addColumn('published', new PublishedColumn)
                              ->addColumn('created_at', new CreatedAtColumn)
                              ->orderColumns(['id'], '-:column $1')
                              ->make(true);
@@ -121,5 +124,11 @@ class SliderController extends BaseWebController
     {
         DeleteSliderAction::run($slider);
         return redirect(route('admin.slider.index'))->withToastSuccess(trans('general.delete_success', ['model' => trans('slider.model')]));
+    }
+
+    public function toggle(Slider $slider)
+    {
+        ToggleSliderAction::run($slider);
+        return redirect(route('admin.slider.index'))->withToastSuccess(trans('general.toggle_success', ['model' => trans('slider.model')]));
     }
 }

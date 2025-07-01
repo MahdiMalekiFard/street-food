@@ -5,6 +5,7 @@
             {data: 'id', name: 'id'},
             {data: 'title', name: 'title', searchable: true},
             {data: 'base_category', name: 'base_category'},
+            {data: 'published', name: 'published'},
             {data: 'created_at', name: 'created_at'},
             {data: 'actions', name: 'actions', orderable: false, searchable: false, width: '1%'}
         ];
@@ -15,10 +16,11 @@
     :title="trans('general.page.index.title',['model'=>trans('slider.model')])">
 
     <x-admin.widget.datatable
-            :rows="[
+        :rows="[
                     trans('datatable.id'),
                     trans('datatable.title'),
                     trans('datatable.base_category'),
+                    trans('datatable.published'),
                     trans('datatable.created_at'),
                     trans('datatable.actions'),
             ]"
