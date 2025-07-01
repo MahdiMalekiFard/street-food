@@ -30,6 +30,8 @@ class GetContentByBaseAction
 
     public function handle($base_id): View
     {
+        $base_id = (int)$base_id;
+
         $blogs = $this->blogRepository->get(['limit' => 6, 'published' => BooleanEnum::ENABLE]);
         $menus = $this->menuRepository->query(['limit' => 4, 'published' => BooleanEnum::ENABLE])->where('base_id', $base_id)->get();
         $sliders = $this->sliderRepository->query()->where('base_id', $base_id)->get();

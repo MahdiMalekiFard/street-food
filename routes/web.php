@@ -45,22 +45,24 @@ Route::group(['prefix' => '{locale?}', 'where' => ['locale' => '[a-zA-Z]{2}']], 
         return view('web.select_base', compact('bases'));
     })->name('index');
 
-    Route::get('/{base_id}', function ($baseId, Request $request) {
-        session(['base_id' => $baseId]);
+    Route::get('/{base_id}', function ($locale, $baseId, Request $request) {
+        session(['base_id' => (int)$baseId]);
         return GetContentByBaseAction::run($baseId);
     })->name('home-by-base');
 
     // pages
-    Route::get('/menu-list', [MenuController::class, 'menuList'])->name('menu-list');
-    Route::get('/blog-list', [BlogController::class, 'blogList'])->name('blog-list');
-    Route::get('/blog-detail/{blog:slug}', [BlogController::class, 'blogDetail'])->name('blog-detail');
-    Route::get('/portfolio-list', [PortfolioController::class, 'portfolioList'])->name('portfolio-list');
-    Route::get('/portfolio-detail/{portfolio:slug}', [PortfolioController::class, 'portfolioDetail'])->name('portfolio-detail');
-    Route::get('/about-us', [PageController::class, 'about'])->name('about-us');
-    Route::get('/gallery-list', [ArtGalleryController::class, 'galleryList'])->name('gallery-list');
-    Route::get('/gallery-detail/{artGallery:id}', [ArtGalleryController::class, 'galleryDetail'])->name('gallery-detail');
-    Route::get('/contact-us-page', [ContactController::class, 'contactUs'])->name('contact-us-page');
-    Route::post('/contact-from-web', [ContactController::class, 'storeContactFromWeb'])->name('store-contact-from-web');
+    Route::prefix('pages')->group(function () {
+        Route::get('/menu-list', [MenuController::class, 'menuList'])->name('menu-list');
+        Route::get('/blog-list', [BlogController::class, 'blogList'])->name('blog-list');
+        Route::get('/blog-detail/{blog:slug}', [BlogController::class, 'blogDetail'])->name('blog-detail');
+        Route::get('/portfolio-list', [PortfolioController::class, 'portfolioList'])->name('portfolio-list');
+        Route::get('/portfolio-detail/{portfolio:slug}', [PortfolioController::class, 'portfolioDetail'])->name('portfolio-detail');
+        Route::get('/about-us', [PageController::class, 'about'])->name('about-us');
+        Route::get('/gallery-list', [ArtGalleryController::class, 'galleryList'])->name('gallery-list');
+        Route::get('/gallery-detail/{artGallery:id}', [ArtGalleryController::class, 'galleryDetail'])->name('gallery-detail');
+        Route::get('/contact-us-page', [ContactController::class, 'contactUs'])->name('contact-us-page');
+        Route::post('/contact-from-web', [ContactController::class, 'storeContactFromWeb'])->name('store-contact-from-web');
+    });
 });
 
 Route::delete('/media/{media}', function ($mediaId) {

@@ -41,7 +41,7 @@
                     <div class="list-info">
                         <ul>
                             <li><i class="fa fa-envelope-open"></i> Info@cafelarosa.dk</li>
-                            <li><i class="fa fa-map"></i> Klostergade 19, 6000 Kolding, Denmark </li>
+                            <li><i class="fa fa-map"></i> Klostergade 19, 6000 Kolding, Denmark</li>
                         </ul>
                     </div>
                 </div>
@@ -59,27 +59,33 @@
                 </div>
                 <nav id="main-nav" class="main-nav">
                     <ul id="menu-primary-menu" class="menu">
-                        <li class="menu-item menu-item-has-children {{ request()->routeIs('index') ? 'current-menu-item' : ''}}">
-                            <a href="/">{{ trans('home.header.home') }}</a>
-                        </li>
-
-                        <li class="menu-item menu-item-has-children {{ request()->routeIs('menu-list') ? 'current-menu-item' : ''}}">
-                            <a href="{{ route('menu-list', ['locale' => app()->getLocale()]) }}">{{ trans('home.header.menu') }}</a>
-                        </li>
-
-                        <li class="menu-item menu-item-has-children {{ request()->routeIs('portfolio-list') ? 'current-menu-item' : ''}}">
-                            <a href="{{ route('portfolio-list', ['locale' => app()->getLocale()]) }}">{{ trans('home.header.portfolio') }}</a>
-                        </li>
-
-                        <li class="menu-item menu-item-has-children {{ request()->routeIs('blog-list') ? 'current-menu-item' : ''}}">
-                            <a href="{{ route('blog-list', ['locale' => app()->getLocale()]) }}">{{ trans('home.header.blog') }}</a>
-                        </li>
-                        <li class="menu-item menu-item-has-children {{ request()->routeIs('gallery-list') ? 'current-menu-item' : ''}}">
-                            <a href="{{ route('gallery-list', ['locale' => app()->getLocale()]) }}">{{ trans('home.header.gallery') }}</a>
-                        </li>
-                        <li class="menu-item menu-item-has-children {{ request()->routeIs('about-us') ? 'current-menu-item' : ''}}">
-                            <a href="{{ route('about-us', ['locale' => app()->getLocale()]) }}">{{ trans('home.header.about_us') }}</a>
-                        </li>
+                        @if(request()->routeIs('index'))
+                            <li class="menu-item menu-item-has-children {{ request()->routeIs('blog-list') ? 'current-menu-item' : ''}}">
+                                <a href="{{ route('blog-list', ['locale' => app()->getLocale()]) }}">{{ trans('home.header.blog') }}</a>
+                            </li>
+                            <li class="menu-item menu-item-has-children {{ request()->routeIs('about-us') ? 'current-menu-item' : ''}}">
+                                <a href="{{ route('about-us', ['locale' => app()->getLocale()]) }}">{{ trans('home.header.about_us') }}</a>
+                            </li>
+                        @else
+                            <li class="menu-item menu-item-has-children {{ request()->routeIs('home-by-base') ? 'current-menu-item' : ''}}">
+                                <a href="{{ route('home-by-base', ['locale' => app()->getLocale(), 'base_id' => session('base_id')]) }}">{{ trans('home.header.home') }}</a>
+                            </li>
+                            <li class="menu-item menu-item-has-children {{ request()->routeIs('menu-list') ? 'current-menu-item' : ''}}">
+                                <a href="{{ route('menu-list', ['locale' => app()->getLocale()]) }}">{{ trans('home.header.menu') }}</a>
+                            </li>
+                            <li class="menu-item menu-item-has-children {{ request()->routeIs('portfolio-list') ? 'current-menu-item' : ''}}">
+                                <a href="{{ route('portfolio-list', ['locale' => app()->getLocale()]) }}">{{ trans('home.header.portfolio') }}</a>
+                            </li>
+                            <li class="menu-item menu-item-has-children {{ request()->routeIs('blog-list') ? 'current-menu-item' : ''}}">
+                                <a href="{{ route('blog-list', ['locale' => app()->getLocale()]) }}">{{ trans('home.header.blog') }}</a>
+                            </li>
+                            <li class="menu-item menu-item-has-children {{ request()->routeIs('gallery-list') ? 'current-menu-item' : ''}}">
+                                <a href="{{ route('gallery-list', ['locale' => app()->getLocale()]) }}">{{ trans('home.header.gallery') }}</a>
+                            </li>
+                            <li class="menu-item menu-item-has-children {{ request()->routeIs('about-us') ? 'current-menu-item' : ''}}">
+                                <a href="{{ route('about-us', ['locale' => app()->getLocale()]) }}">{{ trans('home.header.about_us') }}</a>
+                            </li>
+                        @endif
                     </ul>
                 </nav><!-- /#main-nav -->
 
@@ -98,10 +104,10 @@
                         <p>Café La Rosa, Klostergade 19, 6000 Kolding, Denmark</p>
                         <p>Info@cafelarosa.dk</p>
                         <div class="line"></div>
-                        <p>{{ trans('home.sidebar.opening_hours.text') }} <br />
-                            {{ trans('home.sidebar.opening_hours.Monday') }} - {{ trans('home.sidebar.opening_hours.Thursday') }} : 11:30 – 21:00,<br />
-                            {{ trans('home.sidebar.opening_hours.Friday') }} , {{ trans('home.sidebar.opening_hours.Saturday') }} : 11:30 – 22:00,<br />
-                            {{ trans('home.sidebar.opening_hours.Sunday') }} : 16:00 – 21:00,<br />
+                        <p>{{ trans('home.sidebar.opening_hours.text') }} <br/>
+                            {{ trans('home.sidebar.opening_hours.Monday') }} - {{ trans('home.sidebar.opening_hours.Thursday') }} : 11:30 – 21:00,<br/>
+                            {{ trans('home.sidebar.opening_hours.Friday') }} , {{ trans('home.sidebar.opening_hours.Saturday') }} : 11:30 – 22:00,<br/>
+                            {{ trans('home.sidebar.opening_hours.Sunday') }} : 16:00 – 21:00,<br/>
                         </p>
                         <div class="line"></div>
                         <ul class="list-social">

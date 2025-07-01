@@ -137,7 +137,12 @@ class MenuController extends BaseWebController
 
     public function menuList(MenuRepositoryInterface $repository)
     {
-        $menus = $repository->query()->where('published', BooleanEnum::ENABLE)->get();
+        $baseId = session('base_id');
+
+        $menus = $repository->query()
+                            ->where('published', BooleanEnum::ENABLE)
+                            ->where('base_id', $baseId)
+                            ->get();
         return view('web.pages.menu-list', compact('menus'));
     }
 }
