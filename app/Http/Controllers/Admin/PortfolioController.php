@@ -11,12 +11,14 @@ use App\Actions\Portfolio\UpdatePortfolioAction;
 use App\Enums\BooleanEnum;
 use App\Http\Requests\StorePortfolioRequest;
 use App\Http\Requests\UpdatePortfolioRequest;
+use App\Models\Base;
 use App\Models\Category;
 use App\Models\Portfolio;
 use App\Repositories\Portfolio\PortfolioRepositoryInterface;
 use App\Services\AdvancedSearchFields\AdvancedSearchFieldsService;
 use App\Yajra\Column\ActionColumn;
 use App\Yajra\Column\CategoriesTitleColumn;
+use App\Yajra\Column\CreatedAtColumn;
 use App\Yajra\Column\PublishedColumn;
 use App\Yajra\Column\TitleColumn;
 use App\Yajra\Filter\TitleFilter;
@@ -42,8 +44,10 @@ class PortfolioController extends BaseWebController
                              ->addColumn('title', new TitleColumn)
                              ->addColumn('actions', new ActionColumn('admin.pages.portfolio.index_options'))
                              ->filterColumn('title', new TitleFilter)
+                             ->addColumn('base_category', fn($row) => $row->base?->title)
                              ->addColumn('published', new PublishedColumn)
                              ->addColumn('categories_title', new CategoriesTitleColumn)
+                             ->addColumn('created_at', new CreatedAtColumn)
                              ->orderColumns(['id'], '-:column $1')
                              ->make(true);
         }
@@ -57,7 +61,11 @@ class PortfolioController extends BaseWebController
      */
     public function create()
     {
-        return view('admin.pages.portfolio.create');
+        $bases = Base::query()->where('published', BooleanEnum::ENABLE)->get()->mapWithKeys(function ($item) {
+            return [$item->id => $item->title];
+        });
+
+        return view('admin.pages.portfolio.create', compact('bases'));
     }
 
     /**
@@ -102,7 +110,11 @@ class PortfolioController extends BaseWebController
             'value' => $tag->name, // @phpstan-ignore-line
         ])->toArray();
 
-        return view('admin.pages.portfolio.edit', compact('portfolio', 'selectedCategories', 'selectedTags'));
+        $bases = Base::query()->where('published', BooleanEnum::ENABLE)->get()->mapWithKeys(function ($item) {
+            return [$item->id => $item->title];
+        });
+
+        return view('admin.pages.portfolio.edit', compact('portfolio', 'selectedCategories', 'selectedTags', 'bases'));
     }
 
     /**

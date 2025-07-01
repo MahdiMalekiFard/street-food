@@ -15,6 +15,7 @@ return [
     'code'             => 'Code',
     'country'          => 'Country',
     'title'            => 'Title',
+    'base_category'    => 'Base Category',
     'description'      => 'Description',
     'name'             => 'Name',
     'user'             => 'User',

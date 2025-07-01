@@ -38,6 +38,7 @@ class SliderController extends BaseWebController
                                  return view('admin.pages.slider.index_options', ['row' => $row]);
                              })
                              ->addColumn('title', new TitleColumn)
+                             ->addColumn('base_category', fn($row) => $row->base?->title)
                              ->filterColumn('title', new TitleFilter)
                              ->addColumn('created_at', new CreatedAtColumn)
                              ->orderColumns(['id'], '-:column $1')

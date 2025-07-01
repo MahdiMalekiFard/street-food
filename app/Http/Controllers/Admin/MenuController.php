@@ -11,6 +11,7 @@ use App\Actions\Menu\UpdateMenuAction;
 use App\Enums\BooleanEnum;
 use App\Http\Requests\StoreMenuRequest;
 use App\Http\Requests\UpdateMenuRequest;
+use App\Models\Base;
 use App\Models\Menu;
 use App\Repositories\Menu\MenuRepositoryInterface;
 use App\Services\AdvancedSearchFields\AdvancedSearchFieldsService;
@@ -41,6 +42,7 @@ class MenuController extends BaseWebController
                              ->addColumn('actions', new ActionColumn('admin.pages.menu.index_options'))
                              ->addColumn('title', new TitleColumn)
                              ->filterColumn('title', new TitleFilter)
+                             ->addColumn('base_category', fn($row) => $row->base?->title)
                              ->addColumn('published', new PublishedColumn)
                              ->addColumn('created_at', new CreatedAtColumn)
                              ->orderColumns(['id'], '-:column $1')
@@ -56,7 +58,11 @@ class MenuController extends BaseWebController
      */
     public function create()
     {
-        return view('admin.pages.menu.create');
+        $bases = Base::query()->where('published', BooleanEnum::ENABLE)->get()->mapWithKeys(function ($item) {
+            return [$item->id => $item->title];
+        });
+
+        return view('admin.pages.menu.create', compact('bases'));
     }
 
     /**
@@ -89,7 +95,11 @@ class MenuController extends BaseWebController
      */
     public function edit(Menu $menu)
     {
-        return view('admin.pages.menu.edit', compact('menu'));
+        $bases = Base::query()->where('published', BooleanEnum::ENABLE)->get()->mapWithKeys(function ($item) {
+            return [$item->id => $item->title];
+        });
+
+        return view('admin.pages.menu.edit', compact('menu', 'bases'));
     }
 
     /**

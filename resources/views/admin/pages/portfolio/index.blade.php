@@ -4,8 +4,9 @@
         var datatable_columns = [
             {data: 'id', name: 'id'},
             {data: 'title', name: 'title', searchable: true},
+            {data: 'base_category', name: 'base_category'},
             {data: 'categories_title', name: 'categories_title'},
-            {data: 'total_view', name: 'total_view', orderable: false},
+            // {data: 'total_view', name: 'total_view', orderable: false},
             {data: 'published', name: 'published'},
             {data: 'created_at', name: 'created_at'},
             {data: 'actions', name: 'actions', orderable: false, searchable: false, width: '1%'}
@@ -20,8 +21,9 @@
             :rows="[
                     trans('datatable.id'),
                     trans('datatable.title'),
+                    trans('datatable.base_category'),
                     trans('datatable.categories_title'),
-                    trans('datatable.view_count'),
+//                    trans('datatable.view_count'),
                     trans('datatable.published'),
                     trans('datatable.created_at'),
                     trans('datatable.actions'),

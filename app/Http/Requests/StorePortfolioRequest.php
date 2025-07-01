@@ -26,6 +26,7 @@ class StorePortfolioRequest extends FormRequest
     public function rules(): array
     {
         return [
+            'base_id'         => ['required', 'exists:bases,id'],
             'title'           => ['required', 'string', 'max:255'],
             'description'     => ['nullable', 'string', 'max:255'],
             'body'            => ['required', 'string'],

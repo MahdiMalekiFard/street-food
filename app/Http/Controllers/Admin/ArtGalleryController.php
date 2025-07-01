@@ -8,9 +8,11 @@ use App\Actions\ArtGallery\DeleteArtGalleryAction;
 use App\Actions\ArtGallery\StoreArtGalleryAction;
 use App\Actions\ArtGallery\UpdateArtGalleryAction;
 use App\Enums\ArtGalleryTypeEnum;
+use App\Enums\BooleanEnum;
 use App\Http\Requests\StoreArtGalleryRequest;
 use App\Http\Requests\UpdateArtGalleryRequest;
 use App\Models\ArtGallery;
+use App\Models\Base;
 use App\Repositories\ArtGallery\ArtGalleryRepository;
 use App\Repositories\ArtGallery\ArtGalleryRepositoryInterface;
 use App\Yajra\Column\ActionColumn;
@@ -35,6 +37,7 @@ class ArtGalleryController extends BaseWebController
             return Datatables::of(ArtGallery::query())
                              ->addIndexColumn()
                              ->addColumn('title', new TitleColumn)
+                             ->addColumn('base_category', fn($row) => $row->base?->title)
                              ->addColumn('actions', new ActionColumn('admin.pages.artGallery.index_options'))
                              ->orderColumns(['id'], '-:column $1')
                              ->make(true);
@@ -47,7 +50,11 @@ class ArtGalleryController extends BaseWebController
      */
     public function create()
     {
-        return view('admin.pages.artGallery.create');
+        $bases = Base::query()->where('published', BooleanEnum::ENABLE)->get()->mapWithKeys(function ($item) {
+            return [$item->id => $item->title];
+        });
+
+        return view('admin.pages.artGallery.create', compact('bases'));
     }
 
     /**
@@ -80,7 +87,11 @@ class ArtGalleryController extends BaseWebController
      */
     public function edit(ArtGallery $artGallery)
     {
-        return view('admin.pages.artGallery.edit', compact('artGallery'));
+        $bases = Base::query()->where('published', BooleanEnum::ENABLE)->get()->mapWithKeys(function ($item) {
+            return [$item->id => $item->title];
+        });
+
+        return view('admin.pages.artGallery.edit', compact('artGallery', 'bases'));
     }
 
     /**

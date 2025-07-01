@@ -27,6 +27,7 @@ class StoreArtGalleryAction
      * @param array{
      *     title:string,
      *     description:string,
+     *     base_id:int,
      *     image:string,
      * } $payload
      * @return ArtGallery
@@ -36,7 +37,7 @@ class StoreArtGalleryAction
     {
         return DB::transaction(function () use ($payload) {
             /** @var ArtGallery $model */
-            $model = $this->repository->store(Arr::except($payload, ['title', 'description']));
+            $model = $this->repository->store(Arr::except($payload, ['title', 'description', 'image']));
             $this->syncTranslationAction->handle($model, Arr::only($payload, ['title', 'description']));
 
             $this->fileService->addMedia($model);

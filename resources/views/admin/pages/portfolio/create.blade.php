@@ -15,6 +15,14 @@
             required="1"
         />
 
+        <x-admin.element.select
+            parent-class="col-lg-12"
+            :label="trans('validation.attributes.base_category')"
+            name="base_id"
+            :options="$bases"
+            required="1"
+        />
+
         <x-admin.shared.categories-dropdown
             parent-class="col-md-12"
             :label="trans('validation.attributes.category')"

@@ -29,6 +29,7 @@ class UpdateArtGalleryAction
      * @param array{
      *     title:string,
      *     description:string,
+     *     base_id:int,
      *     image:string,
      * }                 $payload
      * @return ArtGallery
@@ -37,7 +38,7 @@ class UpdateArtGalleryAction
     public function handle(ArtGallery $artGallery, array $payload): ArtGallery
     {
         return DB::transaction(function () use ($artGallery, $payload) {
-            $this->repository->update($artGallery, $payload);
+            $this->repository->update($artGallery, Arr::except($payload, ['title', 'description', 'image']));
             $this->syncTranslationAction->handle($artGallery, Arr::only($payload, ['title', 'description']));
 
             $this->fileService->addMedia($artGallery);

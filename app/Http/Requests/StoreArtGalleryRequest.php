@@ -25,9 +25,10 @@ class StoreArtGalleryRequest extends FormRequest
     public function rules(): array
     {
         return [
+            'base_id'     => ['required', 'exists:bases,id'],
             'title'       => ['required', 'string', 'max:255'],
             'description' => ['nullable', 'string', 'max:255'],
-            'image'       => ['nullable', 'image', 'mimes:jpeg,jpg', 'max:4096'],
+            'image'       => ['nullable', 'image', 'mimes:jpeg,jpg,png', 'max:4096'],
         ];
     }
 }

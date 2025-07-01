@@ -25,6 +25,7 @@ class StoreMenuRequest extends FormRequest
     public function rules(): array
     {
         return [
+            'base_id'     => ['required', 'exists:bases,id'],
             'title'       => ['required', 'string', 'max:255'],
             'description' => ['required', 'string', 'max:255'],
             'image'       => ['required', 'image', 'max:2048', 'mimes:jpeg,jpg,png'],

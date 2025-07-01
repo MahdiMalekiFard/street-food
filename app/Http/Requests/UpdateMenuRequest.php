@@ -26,7 +26,9 @@ class UpdateMenuRequest extends FormRequest
     {
         $rules = (new StoreMenuRequest())->rules();
         return array_merge($rules, [
-
+            'image'       => ['nullable', 'image', 'max:2048', 'mimes:jpeg,jpg,png'],
+            'left_image'  => ['nullable', 'image', 'max:2048', 'mimes:jpeg,jpg,png'],
+            'right_image' => ['nullable', 'image', 'max:2048', 'mimes:jpeg,jpg,png'],
         ]);
     }
 

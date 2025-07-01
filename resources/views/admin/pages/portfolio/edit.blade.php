@@ -45,7 +45,17 @@
                     name="image"
                     required="0"
                     resolution="854*450"
-                    default="{{$portfolio->getFirstMediaUrl('image','480')}}"/>
+                    default="{{$portfolio->getFirstMediaUrl('image','480')}}"
+                />
+
+                <x-admin.element.select
+                    parent-class="col-lg-12"
+                    :label="trans('validation.attributes.base_category')"
+                    name="base_id"
+                    :options="$bases"
+                    :value="$portfolio->base?->id"
+                    required="1"
+                />
 
                 <x-admin.shared.categories-dropdown
                     parent-class="col-lg-12"

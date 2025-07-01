@@ -19,7 +19,7 @@
             let uploadedDocumentAppMap = {};
 
             $('#kt_dropzonejs_example_1').dropzone({
-                url: '{{ route('upload-image-dropzone') }}',
+                url: '{{ route('upload-image-dropzone', ['locale' => app()->getLocale()]) }}',
                 maxFilesize: 2, // MB
                 addRemoveLinks: true,
                 acceptedFiles: 'image/*',
