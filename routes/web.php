@@ -1,7 +1,7 @@
 <?php
 
+use App\Actions\GetContentByBaseAction;
 use App\Enums\BooleanEnum;
-use App\Enums\PageTypeEnum;
 use App\Http\Controllers\Admin\ArtGalleryController;
 use App\Http\Controllers\Admin\AuthController;
 use App\Http\Controllers\Admin\BlogController;
@@ -10,12 +10,7 @@ use App\Http\Controllers\Admin\CoreController;
 use App\Http\Controllers\Admin\MenuController;
 use App\Http\Controllers\Admin\PageController;
 use App\Http\Controllers\Admin\PortfolioController;
-use App\Repositories\Blog\BlogRepositoryInterface;
-use App\Repositories\Menu\MenuRepositoryInterface;
-use App\Repositories\Opinion\OpinionRepositoryInterface;
-use App\Repositories\Page\PageRepositoryInterface;
-use App\Repositories\Portfolio\PortfolioRepositoryInterface;
-use App\Repositories\Slider\SliderRepositoryInterface;
+use App\Repositories\BaseCategory\BaseCategoryRepositoryInterface;
 use Illuminate\Support\Facades\Route;
 use Spatie\MediaLibrary\MediaCollections\Models\Media;
 
@@ -46,23 +41,14 @@ Route::group(['prefix' => '{locale?}', 'where' => ['locale' => '[a-zA-Z]{2}']], 
     });
 
     Route::get('/', function () {
-
-        $blogs = resolve(BlogRepositoryInterface::class)->get(['limit' => 6, 'published' => BooleanEnum::ENABLE]);
-        $menus = resolve(MenuRepositoryInterface::class)->get(['limit' => 4, 'published' => BooleanEnum::ENABLE]);
-        $sliders = resolve(SliderRepositoryInterface::class)->get();
-        $about = resolve(PageRepositoryInterface::class)->query()->where('type', PageTypeEnum::ABOUT_US)->first();
-        $opinions = resolve(OpinionRepositoryInterface::class)->get(['limit' => 4, 'published' => BooleanEnum::ENABLE]);
-        $portfolios = resolve(PortfolioRepositoryInterface::class)->get(['limit' => 4, 'published' => BooleanEnum::ENABLE]);
-
-        return view('web.home', [
-            'menus'      => $menus,
-            'sliders'    => $sliders,
-            'about_page' => $about,
-            'opinions'   => $opinions,
-            'blogs'      => $blogs,
-            'portfolios' => $portfolios
-        ]);
+        $bases = resolve(BaseCategoryRepositoryInterface::class)->get(['published' => BooleanEnum::ENABLE]);
+        return view('web.select_base', compact('bases'));
     })->name('index');
+
+    Route::get('/{base_id}', function ($baseId, Request $request) {
+        session(['base_id' => $baseId]);
+        return GetContentByBaseAction::run($baseId);
+    })->name('home-by-base');
 
     // pages
     Route::get('/menu-list', [MenuController::class, 'menuList'])->name('menu-list');

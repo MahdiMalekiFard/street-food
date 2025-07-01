@@ -25,6 +25,7 @@ class BaseCategoryRepository extends BaseRepository implements BaseCategoryRepos
     {
         return QueryBuilder::for(Base::query())
                            ->with(Arr::get($payload, 'with', []))
+                           ->when($published = Arr::get($payload, 'published', false), fn($query) => $query->where('published', $published))
                            ->defaultSort(Arr::get($payload, 'sort', '-id'))
                            ->allowedSorts(['id', 'created_at', 'updated_at'])
                            ->allowedFilters([
