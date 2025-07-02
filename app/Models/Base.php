@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace App\Models;
 
 use App\Enums\BooleanEnum;
+use App\Traits\HasSlugFromTranslationTitle;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
@@ -21,9 +22,10 @@ class Base extends Model implements HasMedia
     use HasFactory;
     use HasTranslationAuto;
     use InteractsWithMedia;
+    use HasSlugFromTranslationTitle;
 
     protected $fillable = [
-        'published', 'languages',
+        'published', 'languages', 'slug',
     ];
 
     protected $casts = [

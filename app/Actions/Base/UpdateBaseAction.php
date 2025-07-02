@@ -9,6 +9,7 @@ use App\Services\File\FileService;
 use Illuminate\Support\Arr;
 use Illuminate\Support\Facades\DB;
 use Lorisleiva\Actions\Concerns\AsAction;
+use Throwable;
 
 class UpdateBaseAction
 {
@@ -30,13 +31,15 @@ class UpdateBaseAction
      *     description:string,
      *     published:bool,
      *     image:string,
+     *     slug:string,
      * }           $payload
      * @return Base
+     * @throws Throwable
      */
     public function handle(Base $base, array $payload): Base
     {
         return DB::transaction(function () use ($base, $payload) {
-            $this->repository->update($base, Arr::only($payload, ['published']));
+            $this->repository->update($base, Arr::only($payload, ['published', 'slug']));
             $this->syncTranslationAction->handle($base, Arr::only($payload, ['title', 'description']));
 
             $this->fileService->addMedia($base);

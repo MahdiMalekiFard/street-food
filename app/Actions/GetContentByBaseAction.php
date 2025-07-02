@@ -4,6 +4,7 @@ namespace App\Actions;
 
 use App\Enums\BooleanEnum;
 use App\Enums\PageTypeEnum;
+use App\Models\Base;
 use App\Repositories\Blog\BlogRepositoryInterface;
 use App\Repositories\Menu\MenuRepositoryInterface;
 use App\Repositories\Opinion\OpinionRepositoryInterface;
@@ -30,8 +31,6 @@ class GetContentByBaseAction
 
     public function handle($base_id): View
     {
-        $base_id = (int)$base_id;
-
         $blogs = $this->blogRepository->get(['limit' => 6, 'published' => BooleanEnum::ENABLE]);
         $menus = $this->menuRepository->query(['limit' => 4, 'published' => BooleanEnum::ENABLE])->where('base_id', $base_id)->get();
         $sliders = $this->sliderRepository->query()->where('base_id', $base_id)->get();

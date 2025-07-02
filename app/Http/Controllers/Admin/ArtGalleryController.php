@@ -123,7 +123,9 @@ class ArtGalleryController extends BaseWebController
 
     public function galleryList(ArtGalleryRepositoryInterface $repository)
     {
-        $artGalleries = $repository->query()->get();
+        $baseId = session('base_id');
+
+        $artGalleries = $repository->query()->where('base_id', $baseId)->get();
         return view('web.pages.gallery-list', compact('artGalleries'));
     }
 

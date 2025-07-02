@@ -41,7 +41,7 @@
                     <div class="list-info">
                         <ul>
                             <li><i class="fa fa-envelope-open"></i> Info@cafelarosa.dk</li>
-                            <li><i class="fa fa-map"></i> Klostergade 19, 6000 Kolding, Denmark</li>
+                            <li><i class="fa fa-map"></i> Reeperbahn 96, 20359 Hamburg, Tyskland</li>
                         </ul>
                     </div>
                 </div>
@@ -55,11 +55,11 @@
         <div class="container">
             <div id="site-header-inner">
                 <div class="header__logo">
-                    <a href="/"><img src="/img/logo2.png" alt="cafelarosa logo"></a>
+                    <a href="/"><img src="{{ asset('img/new_logo.png') }}" alt="cafelarosa logo"></a>
                 </div>
                 <nav id="main-nav" class="main-nav">
                     <ul id="menu-primary-menu" class="menu">
-                        @if(request()->routeIs('index'))
+                        @if(!session()->has('base_id'))
                             <li class="menu-item menu-item-has-children {{ request()->routeIs('blog-list') ? 'current-menu-item' : ''}}">
                                 <a href="{{ route('blog-list', ['locale' => app()->getLocale()]) }}">{{ trans('home.header.blog') }}</a>
                             </li>
@@ -67,8 +67,11 @@
                                 <a href="{{ route('about-us', ['locale' => app()->getLocale()]) }}">{{ trans('home.header.about_us') }}</a>
                             </li>
                         @else
+                            @php
+                                $base = \App\Models\Base::find(session('base_id'));
+                            @endphp
                             <li class="menu-item menu-item-has-children {{ request()->routeIs('home-by-base') ? 'current-menu-item' : ''}}">
-                                <a href="{{ route('home-by-base', ['locale' => app()->getLocale(), 'base_id' => session('base_id')]) }}">{{ trans('home.header.home') }}</a>
+                                <a href="{{ route('home-by-base', ['locale' => app()->getLocale(), 'base' => $base?->slug]) }}">{{ trans('home.header.home') }}</a>
                             </li>
                             <li class="menu-item menu-item-has-children {{ request()->routeIs('menu-list') ? 'current-menu-item' : ''}}">
                                 <a href="{{ route('menu-list', ['locale' => app()->getLocale()]) }}">{{ trans('home.header.menu') }}</a>
@@ -164,7 +167,7 @@
                             <li>
                                     <span>{{ trans('home.footer.Address') }}:
                                     </span>
-                                <p>Klostergade 19, 6000 Kolding, Denmark</p>
+                                <p>Reeperbahn 96, 20359 Hamburg, Tyskland</p>
                             </li>
                             <li>
                                     <span>{{ trans('home.footer.Booking_Contact') }}:

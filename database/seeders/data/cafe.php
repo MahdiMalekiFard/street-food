@@ -5,16 +5,32 @@ use App\Enums\BooleanEnum;
 return [
     'bases' => [
         [
-            'title'       => 'pizza',
-            'description' => 'pizza is good',
+            'title'       => 'DANISH PIZZA',
+            'slug'        => 'danish-pizza',
+            'description' => 'danish pizza base description',
             'published'   => true,
-            'image'       => public_path('img/blog/blog-01.jpg'),
+            'image'       => public_path('img/gallery/bakery.jpg'),
         ],
         [
-            'title'       => 'sandwich',
-            'description' => 'sandwich is good',
+            'title'       => 'FRIED CHICKEN',
+            'slug'        => 'fried-chicken',
+            'description' => 'fried chicken base description',
             'published'   => true,
-            'image'       => public_path('img/blog/blog-01.jpg'),
+            'image'       => public_path('img/gallery/breakfast.jpg'),
+        ],
+        [
+            'title'       => 'ASIA BOX',
+            'slug'        => 'asia-box',
+            'description' => 'asia box base description',
+            'published'   => true,
+            'image'       => public_path('img/gallery/breakfast.jpg'),
+        ],
+        [
+            'title'       => 'COCKTAIL BAR',
+            'slug'        => 'cocktail-bar',
+            'description' => 'cocktail bar base description',
+            'published'   => true,
+            'image'       => public_path('img/gallery/breakfast.jpg'),
         ],
     ],
 

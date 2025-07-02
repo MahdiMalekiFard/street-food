@@ -9,6 +9,7 @@ use App\Http\Middleware\LanguageMiddleware;
 use App\Http\Middleware\ProAjaxMiddleware;
 use App\Http\Middleware\RedirectIfNotAdmin;
 use App\Http\Middleware\RemoveSearchTermParamFromRequest;
+use App\Http\Middleware\SetBaseContext;
 use App\Http\Middleware\VerifyCsrfToken;
 use Illuminate\Auth\Access\AuthorizationException;
 use Illuminate\Auth\AuthenticationException;

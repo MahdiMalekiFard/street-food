@@ -26,6 +26,7 @@ class StoreBaseAction
     /**
      * @param array{
      *     title:string,
+     *     slug:string,
      *     description:string,
      *     published:bool,
      *     image:string,
@@ -37,7 +38,7 @@ class StoreBaseAction
     {
         return DB::transaction(function () use ($payload) {
             /** @var Base $model */
-            $model = $this->repository->store(Arr::only($payload, ['published']));
+            $model = $this->repository->store(Arr::only($payload, ['published', 'slug']));
             $this->syncTranslationAction->handle($model, Arr::only($payload, ['title', 'description']));
 
             $this->fileService->addMedia($model);

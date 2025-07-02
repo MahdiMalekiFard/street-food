@@ -152,9 +152,12 @@ class PortfolioController extends BaseWebController
 
     public function portfolioList(PortfolioRepositoryInterface $repository)
     {
+        $baseId = session('base_id');
+
         $portfolios = $repository->query([
             'published' => BooleanEnum::ENABLE,
-        ])->get();
+        ])->where('base_id', $baseId)->get();
+
         return view('web.pages.portfolio-list', compact('portfolios'));
     }
 

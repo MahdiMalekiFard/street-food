@@ -10,7 +10,6 @@
                         <h3 class="title" data-aos-duration="1000" data-aos="fade-up">Choose Your base categories</h3>
                         <p class="text" data-aos-duration="1000" data-aos="fade-up">these categories have different contents</p>
                     </div>
-
                     <div class="swiper blogSwiper">
                         <div class="swiper-wrapper">
                             @foreach($bases as $base)
@@ -24,7 +23,7 @@
                                                 <h4>{{ $base?->updated_at->format('y') }}</h4>
                                                 <p>{{ $base?->updated_at->format('M d') }}</p>
                                             </div>
-                                            <a href="{{ route('home-by-base', ['locale' => app()->getLocale(), 'base_id' => $base->id]) }}" class="h5 title">{{ $base?->title }}</a>
+                                            <a href="{{ route('home-by-base', ['locale' => app()->getLocale(), 'base' => $base->slug]) }}" class="h5 title">{{ $base?->title }}</a>
                                         </div>
                                     </div>
                                 </div>

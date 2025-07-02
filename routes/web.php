@@ -41,13 +41,15 @@ Route::group(['prefix' => '{locale?}', 'where' => ['locale' => '[a-zA-Z]{2}']], 
     });
 
     Route::get('/', function () {
+        session()?->forget('base_id');
         $bases = resolve(BaseCategoryRepositoryInterface::class)->get(['published' => BooleanEnum::ENABLE]);
         return view('web.select_base', compact('bases'));
     })->name('index');
 
-    Route::get('/{base_id}', function ($locale, $baseId, Request $request) {
-        session(['base_id' => (int)$baseId]);
-        return GetContentByBaseAction::run($baseId);
+    Route::get('/{base:slug}', function ($locale, $slug, Request $request) {
+        $base = resolve(BaseCategoryRepositoryInterface::class)->find($slug, 'slug', firstOrFail: true);
+        session(['base_id' => $base->id]);
+        return GetContentByBaseAction::run($base->id);
     })->name('home-by-base');
 
     // pages

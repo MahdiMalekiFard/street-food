@@ -1,5 +1,7 @@
-@php @endphp
 @extends('web.layout.main')
+@php
+    $base = \App\Models\Base::find(session('base_id'));
+@endphp
 
 @push('js')
     <script>
@@ -41,7 +43,7 @@
                                         <h2 class="title">{{ $slider->title }}</h2>
                                         <p class="sub-title">{{ $slider->description }}</p>
                                         <div class="wrap-btn">
-                                            <a href="/#menuSection" class="tf-button style2">
+                                            <a href="{{ route('home-by-base', ['locale' => app()->getLocale(), 'base' => $base?->slug]) }}/#menuSection" class="tf-button style2">
                                                 {{ trans('slider.discovery_menu') }}
                                             </a>
                                         </div>

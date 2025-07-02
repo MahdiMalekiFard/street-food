@@ -15,6 +15,7 @@ return new class extends Migration {
             $table->id();
 
             // translations: title, description
+            $table->string('slug')->unique()->index();
             $table->text('languages')->nullable(); // ['de', 'en']
             $table->boolean('published')->default(BooleanEnum::ENABLE->value);
 
