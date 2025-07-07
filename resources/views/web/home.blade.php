@@ -195,7 +195,7 @@
                                 </div>
                             @endforeach
                         </div>
-                        <a href="{{ route('menu-list', ['locale' => app()->getLocale()]) }}" class="tf-button style1 mt-39">{{ trans('home.menu.button') }}</a>
+                        <a href="{{ route('menu-list', ['locale' => app()->getLocale(), 'base' => $base?->slug]) }}" class="tf-button style1 mt-39">{{ trans('home.menu.button') }}</a>
                     </div>
                 </div>
             </div>

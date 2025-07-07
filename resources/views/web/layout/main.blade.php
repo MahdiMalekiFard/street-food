@@ -74,16 +74,16 @@
                                 <a href="{{ route('home-by-base', ['locale' => app()->getLocale(), 'base' => $base?->slug]) }}">{{ trans('home.header.home') }}</a>
                             </li>
                             <li class="menu-item menu-item-has-children {{ request()->routeIs('menu-list') ? 'current-menu-item' : ''}}">
-                                <a href="{{ route('menu-list', ['locale' => app()->getLocale()]) }}">{{ trans('home.header.menu') }}</a>
+                                <a href="{{ route('menu-list', ['locale' => app()->getLocale(), 'base' => $base?->slug]) }}">{{ trans('home.header.menu') }}</a>
                             </li>
                             <li class="menu-item menu-item-has-children {{ request()->routeIs('portfolio-list') ? 'current-menu-item' : ''}}">
-                                <a href="{{ route('portfolio-list', ['locale' => app()->getLocale()]) }}">{{ trans('home.header.portfolio') }}</a>
+                                <a href="{{ route('portfolio-list', ['locale' => app()->getLocale(), 'base' => $base?->slug]) }}">{{ trans('home.header.portfolio') }}</a>
                             </li>
                             <li class="menu-item menu-item-has-children {{ request()->routeIs('blog-list') ? 'current-menu-item' : ''}}">
                                 <a href="{{ route('blog-list', ['locale' => app()->getLocale()]) }}">{{ trans('home.header.blog') }}</a>
                             </li>
                             <li class="menu-item menu-item-has-children {{ request()->routeIs('gallery-list') ? 'current-menu-item' : ''}}">
-                                <a href="{{ route('gallery-list', ['locale' => app()->getLocale()]) }}">{{ trans('home.header.gallery') }}</a>
+                                <a href="{{ route('gallery-list', ['locale' => app()->getLocale(), 'base' => $base?->slug]) }}">{{ trans('home.header.gallery') }}</a>
                             </li>
                             <li class="menu-item menu-item-has-children {{ request()->routeIs('about-us') ? 'current-menu-item' : ''}}">
                                 <a href="{{ route('about-us', ['locale' => app()->getLocale()]) }}">{{ trans('home.header.about_us') }}</a>
@@ -189,6 +189,36 @@
         </div>
     </footer>
     <!-- footer end -->
+
+    @php
+        $bases = \App\Models\Base::query()->where('published', \App\Enums\BooleanEnum::ENABLE)->get();
+    @endphp
+
+        <!-- base icon start -->
+    @if(isset($bases) && $bases->count() && !request()->routeIs('index'))
+        <div class="floating-bases-container">
+            <div class="base-menu-wrapper">
+                <!-- Dropdown -->
+                <ul class="base-links">
+                    @foreach ($bases as $base)
+                        <li>
+                            <a href="{{ route('home-by-base', ['base' => $base->slug, 'locale' => app()->getLocale()]) }}">
+                                {{ $base->title }}
+                            </a>
+                        </li>
+                    @endforeach
+                </ul>
+
+                <!-- Fixed Button -->
+                <a href="{{ url('/') }}" class="base-toggle">
+                    <span class="icon"><i class="fas fa-home"></i></span>
+                    <span class="label">Bases</span>
+                </a>
+            </div>
+        </div>
+    @endif
+    <!-- base icon end -->
+
 </div>
 
 <a id="scroll-top"></a>

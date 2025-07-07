@@ -511,6 +511,20 @@
     }
 }
 
+@include res1024 {
+    .base-links {
+        display: none !important;
+    }
+
+    .base-menu-wrapper:hover .base-links {
+        max-height: 0 !important;
+        opacity: 0 !important;
+        pointer-events: none !important;
+        transform: translateY(10px) !important;
+        padding: 0 !important;
+    }
+}
+
 @include res991 {
     .page-404 .p404-main .numb {
         img {

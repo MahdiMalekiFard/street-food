@@ -135,7 +135,7 @@ class MenuController extends BaseWebController
         return redirect(route('admin.menu.index'))->withToastSuccess(trans('general.toggle_success', ['model' => trans('menu.model')]));
     }
 
-    public function menuList(MenuRepositoryInterface $repository)
+    public function menuList($locale, Base $base, MenuRepositoryInterface $repository)
     {
         $baseId = session('base_id');
 

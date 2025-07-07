@@ -11314,3 +11314,111 @@ img.mfp-img {
 }
 
 /*# sourceMappingURL=app.css.map */
+
+.floating-bases-container {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    z-index: 9999;
+    font-family: 'Segoe UI', 'Inter', sans-serif;
+}
+
+/* Wraps both button and menu */
+.base-menu-wrapper {
+    position: relative;
+    display: inline-block;
+}
+
+/* Fixed Button */
+.base-toggle {
+    background: #0e1300;
+    color: #333;
+    border-radius: 12px;
+    padding: 12px 18px;
+    width: 150px; /* fixed width */
+    height: 52px; /* fixed height */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(4px);
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08);
+    cursor: pointer;
+    transition: background 0.3s ease, color 0.3s ease;
+    text-decoration: none;
+    z-index: 2;
+}
+
+.base-toggle:hover {
+    background-color: #e6c9a2;
+    .icon {
+        color: #0e1300;
+    }
+
+    .label {
+        color: #0e1300;
+    }
+}
+
+.base-toggle .icon {
+    font-size: 18px;
+    margin-right: 8px;
+    color: #e6c9a2;
+}
+
+.base-toggle .label {
+    font-weight: 600;
+    font-size: 15px;
+    color: #e6c9a2;
+    letter-spacing: 0.4px;
+}
+
+/* Dropdown menu — same width as button */
+.base-links {
+    position: absolute;
+    bottom: 100%;
+    left: 0;
+    width: 100%; /* same width as button */
+    margin-bottom: 0; /* no gap */
+
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.1);
+    list-style: none;
+    overflow: hidden;
+
+    max-height: 0;
+    opacity: 0;
+    transform: translateY(10px);
+    transition:
+        max-height 0.4s ease,
+        opacity 0.3s ease,
+        transform 0.3s ease;
+    pointer-events: none;
+    padding: 0;
+}
+
+/* Show dropdown on hover */
+.base-menu-wrapper:hover .base-links {
+    max-height: 500px;
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+    padding: 6px 0;
+}
+
+/* Menu items */
+.base-links li a {
+    display: block;
+    padding: 12px 20px;
+    color: #222;
+    font-size: 14.5px;
+    text-decoration: none;
+    transition: background-color 0.2s ease, color 0.2s ease;
+    width: 100%;
+}
+
+.base-links li a:hover {
+    background-color: #f9f9f9;
+    color: #000;
+}

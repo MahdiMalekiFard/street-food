@@ -150,7 +150,7 @@ class PortfolioController extends BaseWebController
         return redirect(route('admin.portfolio.index'))->withToastSuccess(trans('general.toggle_success', ['model' => trans('portfolio.model')]));
     }
 
-    public function portfolioList(PortfolioRepositoryInterface $repository)
+    public function portfolioList($locale, Base $base, PortfolioRepositoryInterface $repository)
     {
         $baseId = session('base_id');
 

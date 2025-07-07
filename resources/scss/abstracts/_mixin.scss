@@ -154,6 +154,12 @@
     }
 }
 
+@mixin res1024 {
+    @media only screen and (max-width: $res_1024) {
+        @content;
+    }
+}
+
 @mixin res991 {
     @media only screen and (max-width: $res_991) {
         @content;

@@ -121,7 +121,7 @@ class ArtGalleryController extends BaseWebController
         return redirect(route('admin.art-gallery.index'))->withToastSuccess(trans('general.delete_success', ['model' => trans('artGallery.model')]));
     }
 
-    public function galleryList(ArtGalleryRepositoryInterface $repository)
+    public function galleryList($locale, Base $base, ArtGalleryRepositoryInterface $repository)
     {
         $baseId = session('base_id');
 
