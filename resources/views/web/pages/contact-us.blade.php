@@ -44,9 +44,8 @@
                                 <div class="item" data-aos-duration="1000" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
                                     <div class="icon"><i class="fa fa-map"></i></div>
                                     <h5>{{ trans('page.pages.contact.info.text-2') }}</h5>
-                                    <p>Café La Rosa, Klostergade 19, </p>
-                                    <p>6000 Kolding, Denmark</p>
-
+                                    <p>St.Pauli Street Food, Reeperbahn 96, </p>
+                                    <p>20359 Hamburg, Tyskland</p>
                                 </div>
 
                                 <div class="item" data-aos-duration="1000" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
