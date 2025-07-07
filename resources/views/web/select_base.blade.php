@@ -7,8 +7,8 @@
             <div class="row">
                 <div class="col-12">
                     <div class="block-text center">
-                        <h3 class="title" data-aos-duration="1000" data-aos="fade-up">Choose Your base categories</h3>
-                        <p class="text" data-aos-duration="1000" data-aos="fade-up">these categories have different contents</p>
+                        <h3 class="title" data-aos-duration="1000" data-aos="fade-up">{{ trans('base.title') }}</h3>
+                        <p class="text" data-aos-duration="1000" data-aos="fade-up">{{ trans('base.text') }}</p>
                     </div>
                     <div class="swiper blogSwiper">
                         <div class="swiper-wrapper">

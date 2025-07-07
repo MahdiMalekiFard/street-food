@@ -104,7 +104,7 @@
                             {{ trans('home.sidebar.description') }}
                         </p>
                         <h4>+(45) 91 71 97 67</h4>
-                        <p>Café La Rosa, Klostergade 19, 6000 Kolding, Denmark</p>
+                        <p>Reeperbahn 96, 20359 Hamburg, Tyskland</p>
                         <p>Info@cafelarosa.dk</p>
                         <div class="line"></div>
                         <p>{{ trans('home.sidebar.opening_hours.text') }} <br/>
@@ -194,7 +194,7 @@
         $bases = \App\Models\Base::query()->where('published', \App\Enums\BooleanEnum::ENABLE)->get();
     @endphp
 
-        <!-- base icon start -->
+    <!-- base icon start -->
     @if(isset($bases) && $bases->count() && !request()->routeIs('index'))
         <div class="floating-bases-container">
             <div class="base-menu-wrapper">

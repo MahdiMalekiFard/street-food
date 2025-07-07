@@ -20,18 +20,18 @@ class BlogSeeder extends Seeder
         $category = StoreCategoryAction::run([
             'published'       => 1,
             'type'            => CategoryTypeEnum::BLOG,
-            'title'           => 'A Place for Everyone',
-            'description'     => 'Our café restaurant is built on inclusivity. Whether you’re vegan, gluten-free, or just a picky eater (we don’t judge!), we’ve crafted a menu with options for all.',
+            'title'           => 'Ein Platz für alle',
+            'description'     => 'Unser Café-Restaurant setzt auf Inklusivität. Egal, ob Sie Veganer, Glutenfreier oder einfach nur wählerischer Esser sind (wir urteilen nicht!), wir haben eine Speisekarte mit Optionen für alle zusammengestellt.',
             'body'            => '
 <p>
-    Our café restaurant is built on inclusivity. Whether you’re vegan, gluten-free, or just a picky eater (we don’t judge!),
-    we’ve crafted a menu with options for all. We love seeing students typing away on laptops, couples sharing desserts,
-    or parents introducing little ones to their first cappuccino.
+    Unser Café-Restaurant legt Wert auf Inklusivität. Egal, ob Sie vegan, glutenfrei oder einfach nur wählerisch sind (wir urteilen nicht!),
+    wir haben eine Speisekarte mit Optionen für alle zusammengestellt.Wir freuen uns, wenn Studierende am Laptop tippen,
+    Paare Desserts teilen oder Eltern ihren Kleinen ihren ersten Cappuccino anbieten.
 </p>
             ',
-            'slug'            => 'A-Place-for-Everyone',
-            'seo_title'       => 'A Place for Everyone',
-            'seo_description' => 'Our café restaurant is built on inclusivity. Whether you’re vegan, gluten-free, or just a picky eater (we don’t judge!), we’ve crafted a menu with options for all.',
+            'slug'            => 'Ein-Platz-für-alle',
+            'seo_title'       => 'Ein Platz für alle',
+            'seo_description' => 'Unser Café-Restaurant setzt auf Inklusivität. Egal, ob Sie Veganer, Glutenfreier oder einfach nur wählerischer Esser sind (wir urteilen nicht!), wir haben eine Speisekarte mit Optionen für alle zusammengestellt.',
         ]);
 
         foreach ($data['blogs'] as $row) {

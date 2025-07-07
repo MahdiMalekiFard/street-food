@@ -414,7 +414,7 @@
                             <h6 data-aos-duration="1000" data-aos="fade-up">{{ trans('home.location.subtitle2') }}:</h6>
                             <h3 class="phone" data-aos-duration="1000" data-aos="fade-up">+(45) 91 71 97 67</h3>
                             <h6 data-aos-duration="1000" data-aos="fade-up">{{ trans('home.location.subtitle3') }}:</h6>
-                            <p class="mb-6" data-aos-duration="1000" data-aos="fade-up"><span>{{ trans('home.location.address') }}:</span> Klostergade 19, 6000 Kolding, Denmark</p>
+                            <p class="mb-6" data-aos-duration="1000" data-aos="fade-up"><span>{{ trans('home.location.address') }}:</span> Reeperbahn 96, 20359 Hamburg, Tyskland</p>
                             <p class="mb-6" data-aos-duration="1000" data-aos="fade-up"><span>{{ trans('home.location.mail') }}:</span> Info@cafelarosa.dk</p>
                             <a href="{{ route('contact-us-page', ['locale' => app()->getLocale()]) }}" class="tf-button style3">{{ trans('home.location.button') }}</a>
                         </div>

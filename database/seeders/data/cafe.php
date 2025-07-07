@@ -5,30 +5,30 @@ use App\Enums\BooleanEnum;
 return [
     'bases' => [
         [
-            'title'       => 'DANISH PIZZA',
-            'slug'        => 'danish-pizza',
-            'description' => 'danish pizza base description',
+            'title'       => 'DÄNISCHE PIZZA',
+            'slug'        => 'dänische-pizza',
+            'description' => 'Beschreibung des dänischen Pizzabodens',
             'published'   => true,
             'image'       => public_path('img/base/pizza.jpg'),
         ],
         [
-            'title'       => 'FRIED CHICKEN',
-            'slug'        => 'fried-chicken',
-            'description' => 'fried chicken base description',
+            'title'       => 'GEBRATENES HUHN',
+            'slug'        => 'gebratenes-Huhn',
+            'description' => 'Beschreibung der gebratenen Hühnerbasis',
             'published'   => true,
             'image'       => public_path('img/base/chicken.jpg'),
         ],
         [
             'title'       => 'ASIA BOX',
             'slug'        => 'asia-box',
-            'description' => 'asia box base description',
+            'description' => 'Beschreibung der Asia-Box basis',
             'published'   => true,
             'image'       => public_path('img/base/asia.jpg'),
         ],
         [
             'title'       => 'COCKTAIL BAR',
             'slug'        => 'cocktail-bar',
-            'description' => 'cocktail bar base description',
+            'description' => 'Beschreibung der Cocktailbar-Basis',
             'published'   => true,
             'image'       => public_path('img/base/cocktail.jpg'),
         ],
@@ -36,15 +36,15 @@ return [
 
     'sliders' => [
         [
-            'title'       => 'Det er tid til at smage ægte italiensk mad',
-            'description' => 'Trænger du til lækker Paris mad? Måske er du i humør til en saftig bøf? Uanset hvilken slags måltid du har i tankerne.',
+            'title'       => 'Es ist Zeit, echtes italienisches Essen zu probieren',
+            'description' => 'Lust auf köstliches Pariser Essen? Vielleicht haben Sie Lust auf ein saftiges Steak? Ganz gleich, welche Mahlzeit Sie sich vorstellen.',
             'published'   => true,
             'base_id'     => 1,
             'image'       => public_path('img/slider/img_slider_1.jpg'),
         ],
         [
-            'title'       => 'Det er tid til at smage ægte italiensk mad',
-            'description' => 'Trænger du til lækker Paris mad? Måske er du i humør til en saftig bøf? Uanset hvilken slags måltid du har i tankerne.',
+            'title'       => 'Es ist Zeit, echtes italienisches Essen zu probieren',
+            'description' => 'Lust auf köstliches Pariser Essen? Vielleicht haben Sie Lust auf ein saftiges Steak? Ganz gleich, welche Mahlzeit Sie sich vorstellen.',
             'published'   => true,
             'base_id'     => 2,
             'image'       => public_path('img/slider/img_slider_2.jpg'),
@@ -254,8 +254,8 @@ return [
 
     'menus' => [
         [
-            'title'       => 'Særlig menu',
-            'description' => 'Kreativitet møder kulinarisk ekspertise',
+            'title'       => 'Spezial menü',
+            'description' => 'Kreativität trifft kulinarische Expertise',
             'published'   => 1,
             'base_id'     => 1,
             'image'       => public_path('img/menu/menu-zz-1.jpg'),
@@ -263,8 +263,8 @@ return [
             'right_image' => public_path('img/menu/menu1.jpg'),
         ],
         [
-            'title'       => 'Hoved menu',
-            'description' => 'Hjertet i vores café-restaurant',
+            'title'       => 'Haupt menü',
+            'description' => 'Das Herzstück unseres Café-Restaurants',
             'published'   => 1,
             'base_id'     => 1,
             'image'       => public_path('img/menu/menu-zz-2.jpg'),
@@ -272,8 +272,8 @@ return [
             'right_image' => public_path('img/menu/menu.jpg'),
         ],
         [
-            'title'       => 'Fisk og skaldyr',
-            'description' => 'Frisk fra havet til din tallerken',
+            'title'       => 'Fisch und Meeresfrüchte',
+            'description' => 'Frisch aus dem Meer auf Ihren Teller',
             'published'   => 1,
             'base_id'     => 2,
             'image'       => public_path('img/menu/menu-zz-3.jpg'),
@@ -281,8 +281,8 @@ return [
             'right_image' => public_path('img/menu/menu1.jpg'),
         ],
         [
-            'title'       => 'Dessert',
-            'description' => 'Søde afslutninger og overbærende begyndelser',
+            'title'       => 'Nachtisch',
+            'description' => 'Süße Enden und genussvolle Anfänge',
             'published'   => 1,
             'base_id'     => 2,
             'image'       => public_path('img/menu/menu3.jpg'),
@@ -293,43 +293,43 @@ return [
 
     'menu-items' => [
         [
-            'title'         => 'Grillet hummer termistor',
-            'description'   => 'Sukkulent hummerhale bagt med en cremet hvidvinssauce.',
+            'title'         => 'Thermistor für gegrillten Hummer',
+            'description'   => 'Saftiger Hummerschwanz, gebacken mit einer cremigen Weißweinsauce.',
             'published'     => 1,
             'normal_price'  => 22,
             'special_price' => 20,
         ],
         [
             'title'         => 'Safran Muslingegryde',
-            'description'   => 'Sukkulent hummerhale bagt med en cremet hvidvinssauce.',
+            'description'   => 'Saftiger Hummerschwanz, gebacken mit einer cremigen Weißweinsauce.',
             'published'     => 1,
             'normal_price'  => 20,
             'special_price' => 18,
         ],
         [
-            'title'         => 'Seafood Platter Royale',
-            'description'   => 'Sukkulent hummerhale bagt med en cremet hvidvinssauce.',
+            'title'         => 'Meeresfrüchte platte Royale',
+            'description'   => 'Saftiger Hummerschwanz, gebacken mit einer cremigen Weißweinsauce.',
             'published'     => 1,
             'normal_price'  => 36,
             'special_price' => 32,
         ],
         [
-            'title'         => 'Grillet havaborre',
-            'description'   => 'Sukkulent hummerhale bagt med en cremet hvidvinssauce.',
+            'title'         => 'Gegrillter Wolfsbarsch',
+            'description'   => 'Saftiger Hummerschwanz, gebacken mit einer cremigen Weißweinsauce.',
             'published'     => 1,
             'normal_price'  => 44,
             'special_price' => 44,
         ],
         [
-            'title'         => 'Rejer & Avocado salat',
-            'description'   => 'Sukkulent hummerhale bagt med en cremet hvidvinssauce.',
+            'title'         => 'Garnelen Avocado Salat',
+            'description'   => 'Saftiger Hummerschwanz, gebacken mit einer cremigen Weißweinsauce.',
             'published'     => 1,
             'normal_price'  => 38,
             'special_price' => 35,
         ],
         [
-            'title'         => 'Klassisk Fish & Chips',
-            'description'   => 'Sukkulent hummerhale bagt med en cremet hvidvinssauce.',
+            'title'         => 'Klassischer Fish & Chips',
+            'description'   => 'Saftiger Hummerschwanz, gebacken mit einer cremigen Weißweinsauce.',
             'published'     => 1,
             'normal_price'  => 39,
             'special_price' => 19,
@@ -340,24 +340,24 @@ return [
         [
             'user_name' => 'Sarah K.',
             'company'   => 'FoodLovers Co.',
-            'subject'   => 'Café stemning og service',
-            'comment'   => 'Atmosfæren på La Bella Café er uovertruffen - hyggelig, imødekommende og fuld af karakter. Personalet var opmærksomme uden at være påtrængende, hvilket gjorde hele brunchoplevelsen mindeværdig.',
+            'subject'   => 'Café-Atmosphäre und Service',
+            'comment'   => 'Die Atmosphäre im La Bella Café ist unschlagbar – gemütlich, einladend und voller Charakter. Das Personal war aufmerksam, ohne aufdringlich zu sein, was das gesamte Brunch-Erlebnis unvergesslich machte.',
             'ordering'  => 1,
             'published' => true,
         ],
         [
             'user_name' => 'Amir R.',
             'company'   => 'GourmetTech Solutions',
-            'subject'   => 'Restaurant madkvalitet',
-            'comment'   => 'Spiste middag på The Oak House i går aftes - helt fænomenal. Hver ret var perfekt krydret, og ingredienserne smagte utrolig frisk. Deres grillede lam er et must-prøve.',
+            'subject'   => 'Qualität der Speisen im Restaurant',
+            'comment'   => 'Gestern Abend habe ich im Oak House zu Abend gegessen – einfach phänomenal. Jedes Gericht war perfekt gewürzt und die Zutaten schmeckten unglaublich frisch. Das gegrillte Lamm muss man unbedingt probieren.',
             'ordering'  => 2,
             'published' => true,
         ],
         [
             'user_name' => 'Claire D.',
             'company'   => 'Urban Reviews Media',
-            'subject'   => 'Værdi for pengene',
-            'comment'   => 'Til prisen tilbyder Brew & Bite stor værdi. Portionerne er generøse, og de går ikke på kompromis med kvaliteten. Ideelt sted til afslappede forretningsfrokoster eller weekendophold.',
+            'subject'   => 'Preis-Leistungs-Verhältnis',
+            'comment'   => 'Brew & Bite bietet ein hervorragendes Preis-Leistungs-Verhältnis. Die Portionen sind großzügig und die Qualität ist hervorragend. Ideal für ein zwangloses Geschäftsessen oder einen Wochenendausflug.',
             'ordering'  => 3,
             'published' => true,
         ],
@@ -365,99 +365,99 @@ return [
 
     'blogs' => [
         [
-            'title'           => 'Fra bønner til bistro: Oplev hjertet og sjælen i vores caférestaurant',
-            'description'     => 'En rejse gennem smagen, stemningen og passionen, der gør vores café-restaurant til et fristed for madelskere, kaffeentusiaster og alle, der har lyst til en sjælfuld madoplevelse.',
+            'title'           => 'Von der Bohne bis zum Bistro: Erleben Sie das Herz und die Seele unseres Café-Restaurants',
+            'description'     => 'Eine Reise durch den Geschmack, die Atmosphäre und die Leidenschaft, die unser Café-Restaurant zu einem Paradies für Feinschmecker, Kaffeeliebhaber und alle machen, die ein gefühlvolles Speiseerlebnis wünschen.',
             'body'            => '
 <p>
-I hjertet af byen, beliggende mellem hverdagens travlhed og stille hjørner af ro, ligger vores café-restaurant -
-et rum, hvor smag, historier og fællesskab mødes. Uanset om du starter din dag med en rig kop kaffe,
-indhenter venner over frokost eller slapper af med en varm dessert, er hvert besøg mere end blot et måltid - det er et minde.
+Im Herzen der Stadt, eingebettet zwischen dem Trubel des Alltags und ruhigen Ecken der Ruhe, liegt unser Café-Restaurant -
+Ein Ort, an dem Geschmack, Geschichten und Gemeinschaft zusammenkommen. Ob Sie Ihren Tag mit einer Tasse Kaffee beginnen,
+Ob Sie sich mit Freunden zum Mittagessen treffen oder bei einem warmen Dessert entspannen, jeder Besuch ist mehr als nur eine Mahlzeit – es ist eine Erinnerung.
 </p>
             ',
             'published'       => 1,
-            'slug'            => 'Fra-bønner-til-bistro:-Opdag-hjertet-&-sjælen-af-vores-café-restaurant-1',
-            'seo_title'       => 'Fra bønner til bistro: Oplev hjertet og sjælen i vores caférestaurant',
-            'seo_description' => 'En rejse gennem smagen, stemningen og passionen, der gør vores café-restaurant til et fristed for madelskere, kaffeentusiaster og alle, der har lyst til en sjælfuld madoplevelse.',
+            'slug'            => 'Von-der-Bohne-bis-zum-Bistro:-Erleben-Sie-das-Herz-und-die-Seele-unseres-Café-Restaurants1',
+            'seo_title'       => 'Von der Bohne bis zum Bistro: Erleben Sie das Herz und die Seele unseres Café-Restaurants',
+            'seo_description' => 'Eine Reise durch den Geschmack, die Atmosphäre und die Leidenschaft, die unser Café-Restaurant zu einem Paradies für Feinschmecker, Kaffeeliebhaber und alle machen, die ein gefühlvolles Speiseerlebnis wünschen.',
             'image'           => public_path('img/blog/blog-01.jpg')
         ],
         [
-            'title'           => 'Fra bønner til bistro: Oplev hjertet og sjælen i vores caférestaurant',
-            'description'     => 'En rejse gennem smagen, stemningen og passionen, der gør vores café-restaurant til et fristed for madelskere, kaffeentusiaster og alle, der har lyst til en sjælfuld madoplevelse.',
+            'title'           => 'Von der Bohne bis zum Bistro: Erleben Sie das Herz und die Seele unseres Café-Restaurants',
+            'description'     => 'Eine Reise durch den Geschmack, die Atmosphäre und die Leidenschaft, die unser Café-Restaurant zu einem Paradies für Feinschmecker, Kaffeeliebhaber und alle machen, die ein gefühlvolles Speiseerlebnis wünschen.',
             'body'            => '
 <p>
-I hjertet af byen, beliggende mellem hverdagens travlhed og stille hjørner af ro, ligger vores café-restaurant -
-et rum, hvor smag, historier og fællesskab mødes. Uanset om du starter din dag med en rig kop kaffe,
-indhenter venner over frokost eller slapper af med en varm dessert, er hvert besøg mere end blot et måltid - det er et minde.
+Im Herzen der Stadt, eingebettet zwischen dem Trubel des Alltags und ruhigen Ecken der Ruhe, liegt unser Café-Restaurant -
+Ein Ort, an dem Geschmack, Geschichten und Gemeinschaft zusammenkommen. Ob Sie Ihren Tag mit einer Tasse Kaffee beginnen,
+Ob Sie sich mit Freunden zum Mittagessen treffen oder bei einem warmen Dessert entspannen, jeder Besuch ist mehr als nur eine Mahlzeit – es ist eine Erinnerung.
 </p>
             ',
             'published'       => 1,
-            'slug'            => 'Fra-bønner-til-bistro:-Opdag-hjertet-&-sjælen-af-vores-café-restaurant-2',
-            'seo_title'       => 'Fra bønner til bistro: Oplev hjertet og sjælen i vores caférestaurant',
-            'seo_description' => 'En rejse gennem smagen, stemningen og passionen, der gør vores café-restaurant til et fristed for madelskere, kaffeentusiaster og alle, der har lyst til en sjælfuld madoplevelse.',
+            'slug'            => 'Von-der-Bohne-bis-zum-Bistro:-Erleben-Sie-das-Herz-und-die-Seele-unseres-Café-Restaurants2',
+            'seo_title'       => 'Von der Bohne bis zum Bistro: Erleben Sie das Herz und die Seele unseres Café-Restaurants',
+            'seo_description' => 'Eine Reise durch den Geschmack, die Atmosphäre und die Leidenschaft, die unser Café-Restaurant zu einem Paradies für Feinschmecker, Kaffeeliebhaber und alle machen, die ein gefühlvolles Speiseerlebnis wünschen.',
             'image'           => public_path('img/blog/blog-02.jpg')
         ],
         [
-            'title'           => 'Fra bønner til bistro: Oplev hjertet og sjælen i vores caférestaurant',
-            'description'     => 'En rejse gennem smagen, stemningen og passionen, der gør vores café-restaurant til et fristed for madelskere, kaffeentusiaster og alle, der har lyst til en sjælfuld madoplevelse.',
+            'title'           => 'Von der Bohne bis zum Bistro: Erleben Sie das Herz und die Seele unseres Café-Restaurants',
+            'description'     => 'Eine Reise durch den Geschmack, die Atmosphäre und die Leidenschaft, die unser Café-Restaurant zu einem Paradies für Feinschmecker, Kaffeeliebhaber und alle machen, die ein gefühlvolles Speiseerlebnis wünschen.',
             'body'            => '
 <p>
-I hjertet af byen, beliggende mellem hverdagens travlhed og stille hjørner af ro, ligger vores café-restaurant -
-et rum, hvor smag, historier og fællesskab mødes. Uanset om du starter din dag med en rig kop kaffe,
-indhenter venner over frokost eller slapper af med en varm dessert, er hvert besøg mere end blot et måltid - det er et minde.
+Im Herzen der Stadt, eingebettet zwischen dem Trubel des Alltags und ruhigen Ecken der Ruhe, liegt unser Café-Restaurant -
+Ein Ort, an dem Geschmack, Geschichten und Gemeinschaft zusammenkommen. Ob Sie Ihren Tag mit einer Tasse Kaffee beginnen,
+Ob Sie sich mit Freunden zum Mittagessen treffen oder bei einem warmen Dessert entspannen, jeder Besuch ist mehr als nur eine Mahlzeit – es ist eine Erinnerung.
 </p>
             ',
             'published'       => 1,
-            'slug'            => 'Fra-bønner-til-bistro:-Opdag-hjertet-&-sjælen-af-vores-café-restaurant-3',
-            'seo_title'       => 'Fra bønner til bistro: Oplev hjertet og sjælen i vores caférestaurant',
-            'seo_description' => 'En rejse gennem smagen, stemningen og passionen, der gør vores café-restaurant til et fristed for madelskere, kaffeentusiaster og alle, der har lyst til en sjælfuld madoplevelse.',
+            'slug'            => 'Von-der-Bohne-bis-zum-Bistro:-Erleben-Sie-das-Herz-und-die-Seele-unseres-Café-Restaurants3',
+            'seo_title'       => 'Von der Bohne bis zum Bistro: Erleben Sie das Herz und die Seele unseres Café-Restaurants',
+            'seo_description' => 'Eine Reise durch den Geschmack, die Atmosphäre und die Leidenschaft, die unser Café-Restaurant zu einem Paradies für Feinschmecker, Kaffeeliebhaber und alle machen, die ein gefühlvolles Speiseerlebnis wünschen.',
             'image'           => public_path('img/blog/blog-03.jpg')
         ],
         [
-            'title'           => 'Fra bønner til bistro: Oplev hjertet og sjælen i vores caférestaurant',
-            'description'     => 'En rejse gennem smagen, stemningen og passionen, der gør vores café-restaurant til et fristed for madelskere, kaffeentusiaster og alle, der har lyst til en sjælfuld madoplevelse.',
+            'title'           => 'Von der Bohne bis zum Bistro: Erleben Sie das Herz und die Seele unseres Café-Restaurants',
+            'description'     => 'Eine Reise durch den Geschmack, die Atmosphäre und die Leidenschaft, die unser Café-Restaurant zu einem Paradies für Feinschmecker, Kaffeeliebhaber und alle machen, die ein gefühlvolles Speiseerlebnis wünschen.',
             'body'            => '
 <p>
-I hjertet af byen, beliggende mellem hverdagens travlhed og stille hjørner af ro, ligger vores café-restaurant -
-et rum, hvor smag, historier og fællesskab mødes. Uanset om du starter din dag med en rig kop kaffe,
-indhenter venner over frokost eller slapper af med en varm dessert, er hvert besøg mere end blot et måltid - det er et minde.
+Im Herzen der Stadt, eingebettet zwischen dem Trubel des Alltags und ruhigen Ecken der Ruhe, liegt unser Café-Restaurant -
+Ein Ort, an dem Geschmack, Geschichten und Gemeinschaft zusammenkommen. Ob Sie Ihren Tag mit einer Tasse Kaffee beginnen,
+Ob Sie sich mit Freunden zum Mittagessen treffen oder bei einem warmen Dessert entspannen, jeder Besuch ist mehr als nur eine Mahlzeit – es ist eine Erinnerung.
 </p>
             ',
             'published'       => 1,
-            'slug'            => 'Fra-bønner-til-bistro:-Opdag-hjertet-&-sjælen-af-vores-café-restaurant-4',
-            'seo_title'       => 'Fra bønner til bistro: Oplev hjertet og sjælen i vores caférestaurant',
-            'seo_description' => 'En rejse gennem smagen, stemningen og passionen, der gør vores café-restaurant til et fristed for madelskere, kaffeentusiaster og alle, der har lyst til en sjælfuld madoplevelse.',
+            'slug'            => 'Von-der-Bohne-bis-zum-Bistro:-Erleben-Sie-das-Herz-und-die-Seele-unseres-Café-Restaurants4',
+            'seo_title'       => 'Von der Bohne bis zum Bistro: Erleben Sie das Herz und die Seele unseres Café-Restaurants',
+            'seo_description' => 'Eine Reise durch den Geschmack, die Atmosphäre und die Leidenschaft, die unser Café-Restaurant zu einem Paradies für Feinschmecker, Kaffeeliebhaber und alle machen, die ein gefühlvolles Speiseerlebnis wünschen.',
             'image'           => public_path('img/blog/blog-04.jpg')
         ],
         [
-            'title'           => 'Fra bønner til bistro: Oplev hjertet og sjælen i vores caférestaurant',
-            'description'     => 'En rejse gennem smagen, stemningen og passionen, der gør vores café-restaurant til et fristed for madelskere, kaffeentusiaster og alle, der har lyst til en sjælfuld madoplevelse.',
+            'title'           => 'Von der Bohne bis zum Bistro: Erleben Sie das Herz und die Seele unseres Café-Restaurants',
+            'description'     => 'Eine Reise durch den Geschmack, die Atmosphäre und die Leidenschaft, die unser Café-Restaurant zu einem Paradies für Feinschmecker, Kaffeeliebhaber und alle machen, die ein gefühlvolles Speiseerlebnis wünschen.',
             'body'            => '
 <p>
-I hjertet af byen, beliggende mellem hverdagens travlhed og stille hjørner af ro, ligger vores café-restaurant -
-et rum, hvor smag, historier og fællesskab mødes. Uanset om du starter din dag med en rig kop kaffe,
-indhenter venner over frokost eller slapper af med en varm dessert, er hvert besøg mere end blot et måltid - det er et minde.
+Im Herzen der Stadt, eingebettet zwischen dem Trubel des Alltags und ruhigen Ecken der Ruhe, liegt unser Café-Restaurant -
+Ein Ort, an dem Geschmack, Geschichten und Gemeinschaft zusammenkommen. Ob Sie Ihren Tag mit einer Tasse Kaffee beginnen,
+Ob Sie sich mit Freunden zum Mittagessen treffen oder bei einem warmen Dessert entspannen, jeder Besuch ist mehr als nur eine Mahlzeit – es ist eine Erinnerung.
 </p>
             ',
             'published'       => 1,
-            'slug'            => 'Fra-bønner-til-bistro:-Opdag-hjertet-&-sjælen-af-vores-café-restaurant-5',
-            'seo_title'       => 'Fra bønner til bistro: Oplev hjertet og sjælen i vores caférestaurant',
-            'seo_description' => 'En rejse gennem smagen, stemningen og passionen, der gør vores café-restaurant til et fristed for madelskere, kaffeentusiaster og alle, der har lyst til en sjælfuld madoplevelse.',
+            'slug'            => 'Von-der-Bohne-bis-zum-Bistro:-Erleben-Sie-das-Herz-und-die-Seele-unseres-Café-Restaurants5',
+            'seo_title'       => 'Von der Bohne bis zum Bistro: Erleben Sie das Herz und die Seele unseres Café-Restaurants',
+            'seo_description' => 'Eine Reise durch den Geschmack, die Atmosphäre und die Leidenschaft, die unser Café-Restaurant zu einem Paradies für Feinschmecker, Kaffeeliebhaber und alle machen, die ein gefühlvolles Speiseerlebnis wünschen.',
             'image'           => public_path('img/blog/blog-05.jpg')
         ],
         [
-            'title'           => 'Fra bønner til bistro: Oplev hjertet og sjælen i vores caférestaurant',
-            'description'     => 'En rejse gennem smagen, stemningen og passionen, der gør vores café-restaurant til et fristed for madelskere, kaffeentusiaster og alle, der har lyst til en sjælfuld madoplevelse.',
+            'title'           => 'Von der Bohne bis zum Bistro: Erleben Sie das Herz und die Seele unseres Café-Restaurants',
+            'description'     => 'Eine Reise durch den Geschmack, die Atmosphäre und die Leidenschaft, die unser Café-Restaurant zu einem Paradies für Feinschmecker, Kaffeeliebhaber und alle machen, die ein gefühlvolles Speiseerlebnis wünschen.',
             'body'            => '
 <p>
-I hjertet af byen, beliggende mellem hverdagens travlhed og stille hjørner af ro, ligger vores café-restaurant -
-et rum, hvor smag, historier og fællesskab mødes. Uanset om du starter din dag med en rig kop kaffe,
-indhenter venner over frokost eller slapper af med en varm dessert, er hvert besøg mere end blot et måltid - det er et minde.
+Im Herzen der Stadt, eingebettet zwischen dem Trubel des Alltags und ruhigen Ecken der Ruhe, liegt unser Café-Restaurant -
+Ein Ort, an dem Geschmack, Geschichten und Gemeinschaft zusammenkommen. Ob Sie Ihren Tag mit einer Tasse Kaffee beginnen,
+Ob Sie sich mit Freunden zum Mittagessen treffen oder bei einem warmen Dessert entspannen, jeder Besuch ist mehr als nur eine Mahlzeit – es ist eine Erinnerung.
 </p>
             ',
             'published'       => 1,
-            'slug'            => 'Fra-bønner-til-bistro:-Opdag-hjertet-&-sjælen-af-vores-café-restaurant-6',
-            'seo_title'       => 'Fra bønner til bistro: Oplev hjertet og sjælen i vores caférestaurant',
-            'seo_description' => 'En rejse gennem smagen, stemningen og passionen, der gør vores café-restaurant til et fristed for madelskere, kaffeentusiaster og alle, der har lyst til en sjælfuld madoplevelse.',
+            'slug'            => 'Von-der-Bohne-bis-zum-Bistro:-Erleben-Sie-das-Herz-und-die-Seele-unseres-Café-Restaurants6',
+            'seo_title'       => 'Von der Bohne bis zum Bistro: Erleben Sie das Herz und die Seele unseres Café-Restaurants',
+            'seo_description' => 'Eine Reise durch den Geschmack, die Atmosphäre und die Leidenschaft, die unser Café-Restaurant zu einem Paradies für Feinschmecker, Kaffeeliebhaber und alle machen, die ein gefühlvolles Speiseerlebnis wünschen.',
             'image'           => public_path('img/blog/blog-06.jpg')
         ],
     ]
