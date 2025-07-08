@@ -26,8 +26,20 @@
 
 <!-- preload start -->
 <div class="preloader">
-    <div class="clear-loading loading-effect-2">
-        <span></span>
+    <div class="clear-loading loading-effect-new">
+        <div class="professional-preloader">
+            <div class="logo-container">
+                <div class="logo-ring">
+                    <div class="inner-ring"></div>
+                </div>
+            </div>
+            <div class="loading-text">Loading...</div>
+            <div class="progress-container">
+                <div class="progress-bar">
+                    <div class="progress-fill"></div>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
 <!-- preload end -->

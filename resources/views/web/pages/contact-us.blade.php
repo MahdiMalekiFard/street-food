@@ -26,10 +26,10 @@
                     <div class="col-12">
                         <div class="contact-main">
                             <div class="top-map">
-                                <iframe
-                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2260.482383388416!2d9.476794800000002!3d55.489118999999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x464c9f0019b6299f%3A0xa493dc39f998825a!2sCaf%C3%A9%20La%20Rosa!5e0!3m2!1sen!2s!4v1749471355128!5m2!1sen!2s"
-                                    width="100%" height="533px" style="border:0;" allowfullscreen="" loading="lazy"
+                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2370.4502886549985!2d9.959066777059126!3d53.54972885948595!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47b18f0002b2ee23%3A0x951287e09d4e307a!2sSt.Pauli%20Street%20Food!5e0!3m2!1sen!2s!4v1751972825670!5m2!1sen!2s"
+                                    width="100%" height="533px" style="border:0;" allowfullscreen="" loading="lazy" 
                                     referrerpolicy="no-referrer-when-downgrade"></iframe>
+                            
                             </div>
 
                             <div class="contact-info">

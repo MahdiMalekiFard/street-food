@@ -703,83 +703,119 @@ form button {
   box-sizing: border-box;
 }
 
-.loading-effect-2 {
-  width: 100px;
-  height: 100px;
+.loading-effect-new {
+  width: 200px;
+  height: 150px;
 }
 
-.loading-effect-2 > span,
-.loading-effect-2 > span:before,
-.loading-effect-2 > span:after {
-  content: "";
-  display: block;
+.professional-preloader {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo-container {
+  position: relative;
+  margin-bottom: 30px;
+}
+
+.logo-ring {
+  width: 80px;
+  height: 80px;
+  border: 3px solid #f0f0f0;
+  border-top: 3px solid #e6c9a2;
   border-radius: 50%;
-  border: 2px solid #e6c9a2;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-  -moz-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  -o-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
+  animation: spin 1.5s linear infinite;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.loading-effect-2 > span {
+.inner-ring {
+  width: 50px;
+  height: 50px;
+  border: 2px solid transparent;
+  border-bottom: 2px solid #080f19;
+  border-radius: 50%;
+  animation: spin-reverse 1s linear infinite;
+}
+
+.loading-text {
+  font-family: "DM Sans", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  margin-bottom: 25px;
+  color: #080f19;
+  letter-spacing: 0.5px;
+  opacity: 0.8;
+}
+
+.progress-container {
+  width: 200px;
+  height: 4px;
+  background-color: #f0f0f0;
+  border-radius: 2px;
+  overflow: hidden;
+  position: relative;
+}
+
+.progress-bar {
   width: 100%;
   height: 100%;
-  top: 0;
-  left: 0;
-  border-left-color: transparent;
-  -webkit-animation: effect-2 2s infinite linear;
-  -moz-animation: effect-2 2s infinite linear;
-  -ms-animation: effect-2 2s infinite linear;
-  -o-animation: effect-2 2s infinite linear;
-  animation: effect-2 2s infinite linear;
+  position: relative;
 }
 
-.loading-effect-2 > span:before {
-  width: 75%;
-  height: 75%;
-  border-right-color: transparent;
+.progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #e6c9a2, #d4b896, #e6c9a2);
+  background-size: 200% 100%;
+  border-radius: 2px;
+  animation: progress-fill 2s ease-in-out infinite, gradient-shift 1.5s ease-in-out infinite;
+  width: 0%;
 }
 
-.loading-effect-2 > span:after {
-  width: 50%;
-  height: 50%;
-  border-bottom-color: transparent;
-}
-
-@-webkit-keyframes effect-2 {
-  from {
-    -webkit-transform: rotate(0deg);
-    -moz-transform: rotate(0deg);
-    -ms-transform: rotate(0deg);
-    -o-transform: rotate(0deg);
+@keyframes spin {
+  0% {
     transform: rotate(0deg);
   }
-  to {
-    -webkit-transform: rotate(360deg);
-    -moz-transform: rotate(360deg);
-    -ms-transform: rotate(360deg);
-    -o-transform: rotate(360deg);
+  100% {
     transform: rotate(360deg);
   }
 }
-@keyframes effect-2 {
-  from {
-    -webkit-transform: rotate(0deg);
-    -moz-transform: rotate(0deg);
-    -ms-transform: rotate(0deg);
-    -o-transform: rotate(0deg);
+
+@keyframes spin-reverse {
+  0% {
+    transform: rotate(360deg);
+  }
+  100% {
     transform: rotate(0deg);
   }
-  to {
-    -webkit-transform: rotate(360deg);
-    -moz-transform: rotate(360deg);
-    -ms-transform: rotate(360deg);
-    -o-transform: rotate(360deg);
-    transform: rotate(360deg);
+}
+
+@keyframes progress-fill {
+  0% {
+    width: 0%;
+  }
+  50% {
+    width: 70%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+@keyframes gradient-shift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
   }
 }
 .top-bar {
@@ -11341,7 +11377,7 @@ img.mfp-img {
     align-items: center;
     justify-content: center;
     backdrop-filter: blur(4px);
-    border: 1px solid rgba(0, 0, 0, 0.08);
+    border: 1px solid #e3a24e;
     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08);
     cursor: pointer;
     transition: background 0.3s ease, color 0.3s ease;
@@ -11350,13 +11386,13 @@ img.mfp-img {
 }
 
 .base-toggle:hover {
-    background-color: #e6c9a2;
+    background-color: #e3a24e;
     .icon {
-        color: #0e1300;
+        color: #0d382f;
     }
 
     .label {
-        color: #0e1300;
+        color: #0d382f;
     }
 }
 
