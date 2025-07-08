@@ -11331,7 +11331,7 @@ img.mfp-img {
 
 /* Fixed Button */
 .base-toggle {
-    background: #0e1300;
+    background: #0d382f;
     color: #333;
     border-radius: 12px;
     padding: 12px 18px;
@@ -11363,13 +11363,13 @@ img.mfp-img {
 .base-toggle .icon {
     font-size: 18px;
     margin-right: 8px;
-    color: #e6c9a2;
+    color: #e3a24e;
 }
 
 .base-toggle .label {
     font-weight: 600;
     font-size: 15px;
-    color: #e6c9a2;
+    color: #e3a24e;
     letter-spacing: 0.4px;
 }
 
