@@ -17,7 +17,9 @@
                                     <div class="blog-box">
                                         <div class="top-content">
                                             <div class="image">
-                                                <img src="{{ $base?->getFirstMediaUrl('image') ?? '#' }}" alt="">
+                                                <a href="{{ route('home-by-base', ['locale' => app()->getLocale(), 'base' => $base->slug]) }}">
+                                                    <img src="{{ $base?->getFirstMediaUrl('image') ?? '#' }}" alt="">
+                                                </a>
                                             </div>
                                             <div class="meta">
                                                 <h4>{{ $base?->updated_at->format('y') }}</h4>
