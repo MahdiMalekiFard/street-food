@@ -51,9 +51,8 @@
                                 <div class="item" data-aos-duration="1000" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
                                     <div class="icon"><i class="fa fa-clock"></i></div>
                                     <h5>{{ trans('page.pages.contact.info.text-3') }}</h5>
-                                    <p>{{ trans('home.sidebar.opening_hours.Monday') }} - {{ trans('home.sidebar.opening_hours.Thursday') }}: 11.30 - 21:00 </p>
-                                    <p>{{ trans('home.sidebar.opening_hours.Friday') }}, {{ trans('home.sidebar.opening_hours.Saturday') }}: 11.30 - 22:00 </p>
-                                    <p>{{ trans('home.sidebar.opening_hours.Sunday') }}: 16:00 - 21:00</p>
+                                    <p>{{ trans('home.sidebar.opening_hours.Monday') }} - {{ trans('home.sidebar.opening_hours.Friday') }}: 11.00 - 01:00 (nächster Tag) </p>
+                                    <p>{{ trans('home.sidebar.opening_hours.Saturday') }}, {{ trans('home.sidebar.opening_hours.Sunday') }}: 11.00 - 07:00 (nächster Tag) </p>
                                 </div>
                             </div>
                         </div>

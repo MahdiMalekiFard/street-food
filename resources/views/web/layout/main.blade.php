@@ -120,9 +120,8 @@
                         <p>Info@cafelarosa.dk</p>
                         <div class="line"></div>
                         <p>{{ trans('home.sidebar.opening_hours.text') }} <br/>
-                            {{ trans('home.sidebar.opening_hours.Monday') }} - {{ trans('home.sidebar.opening_hours.Thursday') }} : 11:30 – 21:00,<br/>
-                            {{ trans('home.sidebar.opening_hours.Friday') }} , {{ trans('home.sidebar.opening_hours.Saturday') }} : 11:30 – 22:00,<br/>
-                            {{ trans('home.sidebar.opening_hours.Sunday') }} : 16:00 – 21:00,<br/>
+                            {{ trans('home.sidebar.opening_hours.Monday') }} - {{ trans('home.sidebar.opening_hours.Friday') }} : 11:00 - 01:00 (nächster Tag),<br/>
+                            {{ trans('home.sidebar.opening_hours.Saturday') }} , {{ trans('home.sidebar.opening_hours.Sunday') }} : 11:00 - 07:00 (nächster Tag)<br/>
                         </p>
                         <div class="line"></div>
                         <ul class="list-social">
@@ -163,10 +162,8 @@
                             <h5>{{ trans('home.footer.opening_time') }}</h5>
                         </div>
                         <ul>
-                            <li>{{ trans('home.sidebar.opening_hours.Monday') }} - {{ trans('home.sidebar.opening_hours.Thursday') }}: 11:30 - 21:00</li>
-                            <li>{{ trans('home.sidebar.opening_hours.Friday') }}: 11:30 - 22:00</li>
-                            <li>{{ trans('home.sidebar.opening_hours.Saturday') }}: 11:30 - 22:00</li>
-                            <li>{{ trans('home.sidebar.opening_hours.Sunday') }}: 16:00 - 21:00</li>
+                            <li>{{ trans('home.sidebar.opening_hours.Monday') }} - {{ trans('home.sidebar.opening_hours.Friday') }}: 11:00 - 01:00 (nächster Tag)</li>
+                            <li>{{ trans('home.sidebar.opening_hours.Saturday') }}, {{ trans('home.sidebar.opening_hours.Sunday') }}: 11:00 - 07:00 (nächster Tag)</li>
                         </ul>
                     </div>
                 </div>
