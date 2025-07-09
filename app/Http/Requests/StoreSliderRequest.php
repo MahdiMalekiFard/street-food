@@ -28,7 +28,7 @@ class StoreSliderRequest extends FormRequest
             'title'       => ['required', 'string', 'max:255'],
             'base_id'     => ['required', 'exists:bases,id'],
             'description' => ['required', 'string', 'max:255'],
-            'image'       => ['required', 'image', 'max:2048', 'mimes:jpeg,jpg,png'],
+            'image'       => ['required', 'image', 'max:4096', 'mimes:jpeg,jpg,png'],
             'published'   => ['required', 'boolean'],
         ];
     }

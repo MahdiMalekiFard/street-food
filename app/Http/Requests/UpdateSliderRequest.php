@@ -25,7 +25,7 @@ class UpdateSliderRequest extends FormRequest
     public function rules(): array
     {
         $rules = (new StoreSliderRequest())->rules();
-        $rules['image'] = ['nullable', 'image', 'max:2048', 'mimes:jpeg,jpg,png'];
+        $rules['image'] = ['nullable', 'image', 'max:4096', 'mimes:jpeg,jpg,png'];
 
         return array_merge($rules, [
 

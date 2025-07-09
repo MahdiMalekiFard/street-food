@@ -3,11 +3,11 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="IE=edge">
-    <title>Café La Rosa Kolding</title>
+    <title>St.Pauli Street Food</title>
     <meta name="author" content="mahdi malekifard">
     <meta name="developer" content="https://karnoweb.com">
     <meta name="keywords"
-          content="café near me, best café, cozy café, café with Wi-Fi, late-night café, pet-friendly café, coffee shop, café menu, tea café, espresso café, latte art café">
+          content="street food, street food restaurant, best street food, street food near me, local street food, urban street food, street food spot, authentic street food, street food experience, restaurant menu">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="shortcut icon" type="image/x-icon" href="/img/favicon.ico">
     <link rel="stylesheet" href="/css/bootstrap.css">

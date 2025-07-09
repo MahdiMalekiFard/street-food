@@ -1,16 +1,38 @@
-var swiper1 = new Swiper(".mySwiper", {
-  slidesPerView: 1,
-  spaceBetween: 0,
-  pagination: {
-    el: ".pagination-swiper1",
-    clickable: true,
-    renderBullet: function (index, className) {
-      return '<span class="' + className + '">' + (index + 1) + "</span>";
-    }
-  },
-  navigation: {
-    nextEl: ".next-swiper",
-    prevEl: ".prev-swiper",
+// Wait for DOM to be fully loaded
+document.addEventListener('DOMContentLoaded', function() {
+  const swiperElement = document.querySelector('.mySwiper');
+  const slides = document.querySelectorAll('.mySwiper .swiper-slide');
+  
+  if (swiperElement && slides.length > 0) {
+    var swiper1 = new Swiper(".mySwiper", {
+      slidesPerView: 1,
+      spaceBetween: 0,
+      loop: false,
+      autoplay: slides.length > 1 ? {
+        delay: 5000,
+        disableOnInteraction: false,
+      } : false,
+      pagination: slides.length > 1 ? {
+        el: ".mySwiper .swiper-pagination",
+        clickable: true,
+        dynamicBullets: false,
+      } : false,
+      navigation: {
+        nextEl: ".next-swiper",
+        prevEl: ".prev-swiper",
+      },
+      on: {
+        init: function() {
+          // Hide pagination if only one slide
+          if (this.slides.length <= 1) {
+            const pagination = document.querySelector('.mySwiper .swiper-pagination');
+            if (pagination) {
+              pagination.style.display = 'none';
+            }
+          }
+        }
+      }
+    });
   }
 });
 
