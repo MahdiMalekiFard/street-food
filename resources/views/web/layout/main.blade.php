@@ -64,10 +64,13 @@
 
     <!-- Header -->
     <header id="header_main" class="header style-1">
+        @php
+            $base = \App\Models\Base::find(session('base_id'));
+        @endphp
         <div class="container">
             <div id="site-header-inner">
                 <div class="header__logo">
-                    <a href="/"><img src="{{ asset('img/new_logo.png') }}" alt="cafelarosa logo"></a>
+                    <a href="{{ route('home-by-base', ['locale' => app()->getLocale(), 'base' => $base?->slug]) }}"><img src="{{ asset('img/logo.png') }}" alt="cafelarosa logo"></a>
                 </div>
                 <nav id="main-nav" class="main-nav">
                     <ul id="menu-primary-menu" class="menu">
@@ -79,9 +82,6 @@
                                 <a href="{{ route('about-us', ['locale' => app()->getLocale()]) }}">{{ trans('home.header.about_us') }}</a>
                             </li>
                         @else
-                            @php
-                                $base = \App\Models\Base::find(session('base_id'));
-                            @endphp
                             <li class="menu-item menu-item-has-children {{ request()->routeIs('home-by-base') ? 'current-menu-item' : ''}}">
                                 <a href="{{ route('home-by-base', ['locale' => app()->getLocale(), 'base' => $base?->slug]) }}">{{ trans('home.header.home') }}</a>
                             </li>
@@ -104,7 +104,9 @@
                     </ul>
                 </nav><!-- /#main-nav -->
 
-                <a href="{{ route('contact-us-page', ['locale' => app()->getLocale()]) }}" class="tf-button style1 ">{{ trans('home.header.contact_us') }}</a>
+                @if(!request()->routeIs('contact-us-page')) 
+                    <a href="{{ route('contact-us-page', ['locale' => app()->getLocale()]) }}" class="tf-button style6 ">{{ trans('home.header.contact_us') }}</a>
+                @endif
 
                 <div class="sidebar-btn">
                     <a class="btn-side">

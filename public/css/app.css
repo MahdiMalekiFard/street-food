@@ -869,13 +869,13 @@ form button {
 .header__logo img,
 .footer__logo {
     filter: brightness(0) invert(1);
-    width: 135px;
+    width: 100px;
     height: 85px;
 }
 
 .sidebar__logo {
     filter: brightness(0) invert(1);
-    width: 160px;
+    width: 175px;
     height: 109px;
 }
 
@@ -1126,7 +1126,7 @@ form button {
 .sidebar-content img {
     margin-bottom: 60px;
     margin-right: 60px;
-    height: 109px;
+    height: 80px;
 }
 .sidebar-content p {
   color: #fff;
