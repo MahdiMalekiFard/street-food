@@ -64,13 +64,13 @@
 
     <!-- Header -->
     <header id="header_main" class="header style-1">
-        @php
-            $base = \App\Models\Base::find(session('base_id'));
-        @endphp
         <div class="container">
             <div id="site-header-inner">
+                @php
+                    $base = \App\Models\Base::find(session('base_id'));
+                @endphp
                 <div class="header__logo">
-                    <a href="{{ route('home-by-base', ['locale' => app()->getLocale(), 'base' => $base?->slug]) }}"><img src="{{ asset('img/logo.png') }}" alt="cafelarosa logo"></a>
+                    <a href="{{ request()->routeIs('home-by-base') ? route('home-by-base', ['locale' => app()->getLocale(), 'base' => $base?->slug]) : route('index') }}"><img src="{{ asset('img/logo.png') }}" alt="St.Pauli Street Food logo"></a>
                 </div>
                 <nav id="main-nav" class="main-nav">
                     <ul id="menu-primary-menu" class="menu">
@@ -105,7 +105,7 @@
                 </nav><!-- /#main-nav -->
 
                 @if(!request()->routeIs('contact-us-page')) 
-                    <a href="{{ route('contact-us-page', ['locale' => app()->getLocale()]) }}" class="tf-button style6 ">{{ trans('home.header.contact_us') }}</a>
+                    <a href="{{ route('contact-us-page', ['locale' => app()->getLocale()]) }}" class="tf-button style2 ">{{ trans('home.header.contact_us') }}</a>
                 @endif
 
                 <div class="sidebar-btn">
