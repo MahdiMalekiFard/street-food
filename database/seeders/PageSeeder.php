@@ -30,7 +30,7 @@ Unsere Köche bringen das Beste der Mittelmeerregion auf Ihren Tisch und legen d
         ]);
 
         try {
-            $page->addMedia(public_path('img/about/about.jpg'))
+            $page->addMedia(public_path('img/about/about2.jpg'))
                  ->preservingOriginal()
                  ->toMediaCollection('image');
         } catch (Exception) {

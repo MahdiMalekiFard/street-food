@@ -35,19 +35,103 @@ return [
     ],
 
     'sliders' => [
+        // Dänische Pizza
         [
-            'title'       => 'Es ist Zeit, echtes italienisches Essen zu probieren',
-            'description' => 'Lust auf köstliches Pariser Essen? Vielleicht haben Sie Lust auf ein saftiges Steak? Ganz gleich, welche Mahlzeit Sie sich vorstellen.',
+            'title'       => 'Wo skandinavische Tradition auf italienische Leidenschaft trifft',
+            'description' => 'Eine perfekte Harmonie aus frischen nordischen Zutaten und im Steinofen gebackener italienischer Kruste.',
             'published'   => true,
             'base_id'     => 1,
             'image'       => public_path('img/slider/img_slider_1.jpg'),
         ],
         [
-            'title'       => 'Es ist Zeit, echtes italienisches Essen zu probieren',
-            'description' => 'Lust auf köstliches Pariser Essen? Vielleicht haben Sie Lust auf ein saftiges Steak? Ganz gleich, welche Mahlzeit Sie sich vorstellen.',
+            'title'       => 'Nordische Kruste, globaler Geschmack',
+            'description' => 'Entdecken Sie unsere einzigartigen dänischen Pizzen, gebacken mit Käse aus der Region, Bio-Gemüse und rauchigen Belägen.',
+            'published'   => true,
+            'base_id'     => 1,
+            'image'       => public_path('img/slider/img_slider_6.jpg'),
+        ],
+        [
+            'title'       => 'Der Geschmack Dänemarks auf einer Pizza',
+            'description' => 'Probieren Sie unsere dänisch inspirierten Pizzen mit reichhaltigem, cremigem Käse und langsam gebratenem Fleisch.',
+            'published'   => true,
+            'base_id'     => 1,
+            'image'       => public_path('img/slider/img_slider_7.jpg'),
+        ],
+        [
+            'title'       => 'Hygge auf einem Teller',
+            'description' => 'Unsere Pizzen sind so gestaltet, dass sie Wärme und Freude bringen - mit buttrigem Boden, frischen lokalen Belägen.',
+            'published'   => true,
+            'base_id'     => 1,
+            'image'       => public_path('img/slider/img_slider_8.jpg'),
+        ],
+        
+        // Gebratenes Huhn
+        [
+            'title'       => 'Außen knusprig, innen saftig',
+            'description' => 'Goldbraun, knusprig und perfekt zubereitet - unser Brathähnchen wird mit kräftigen Gewürzen gewürzt und frisch frittiert, für diesen unschlagbaren Knuspergenuss bei jedem Bissen.',
             'published'   => true,
             'base_id'     => 2,
+            'image'       => public_path('img/slider/img_slider_3.jpg'),
+        ],
+        [
+            'title'       => 'Geboren, um gebraten zu werden',
+            'description' => 'Holen Sie sich das knusprigste, leckerste und leckerste Hähnchen der Stadt. Es ist eine Sauerei. Es ist saftig. Es macht süchtig.',
+            'published'   => true,
+            'base_id'     => 2,
+            'image'       => public_path('img/slider/img_slider_4.jpg'),
+        ],
+        [
+            'title'       => 'Der Crunch, der Herzen gewinnt',
+            'description' => 'Beißen Sie in knusprige Panade und zartes Hähnchenfleisch, gewürzt mit unserer Spezialmischung. Heiß, frisch und mit viel Charakter serviert.',
+            'published'   => true,
+            'base_id'     => 2,
+            'image'       => public_path('img/slider/img_slider_5.jpg'),
+        ],
+
+        // Asia Box
+        [
+            'title'       => 'Asien in jedem Bissen',
+            'description' => 'Von Thai-Nudeln über koreanisches BBQ bis hin zu japanischen Sushi-Rollen - unsere Asia Box bringt die kräftigen, süßen, würzigen und herzhaften Aromen des Ostens direkt auf Ihren Tisch.',
+            'published'   => true,
+            'base_id'     => 3,
+            'image'       => public_path('img/slider/img_slider_9.jpg'),
+        ],
+        [
+            'title'       => 'Den Osten entdecken',
+            'description' => 'Ihr liebstes asiatisches Streetfood, gebraten, gedämpft und perfekt gewürzt - alles serviert in einer unwiderstehlichen Box.',
+            'published'   => true,
+            'base_id'     => 3,
+            'image'       => public_path('img/slider/img_slider_10.jpg'),
+        ],
+        [
+            'title'       => 'Probieren Sie die Straßen Asiens',
+            'description' => 'Unsere Asia Box bietet Ihnen brutzelnde Nudeln, knusprige Frühlingsrollen, Klebreis und mehr - inspiriert von Nachtmärkten von Bangkok bis Tokio.',
+            'published'   => true,
+            'base_id'     => 3,
+            'image'       => public_path('img/slider/img_slider_11.jpg'),
+        ],
+
+        // Cocktail Bar
+        [
+            'title'       => 'Schütteln. Umrühren. Nippen. Wiederholen.',
+            'description' => 'Von zeitlosen Klassikern bis hin zu gewagten neuen Mischungen serviert unsere Cocktailbar handgemachte Getränke mit erstklassigen Spirituosen, frischen Zutaten und kühner Kreativität in jedem Glas.',
+            'published'   => true,
+            'base_id'     => 4,
             'image'       => public_path('img/slider/img_slider_2.jpg'),
+        ],
+        [
+            'title'       => 'Wo die Nacht beginnt',
+            'description' => 'Tauchen Sie ein in eine Atmosphäre aus Musik, stimmungsvoller Beleuchtung und meisterhaft gemixten Getränken.',
+            'published'   => true,
+            'base_id'     => 4,
+            'image'       => public_path('img/slider/img_slider_12.jpg'),
+        ],
+        [
+            'title'       => 'Paradies im Glas',
+            'description' => 'Kommen Sie mit unseren spritzigen Cocktails in Urlaubsstimmung - denken Sie an Zitrusfrüchte, exotische Aufgüsse und sanften Rum unter Neonlicht.',
+            'published'   => true,
+            'base_id'     => 4,
+            'image'       => public_path('img/slider/img_slider_13.jpg'),
         ],
     ],
 

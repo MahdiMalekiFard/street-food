@@ -134,7 +134,7 @@
                 </div>
                 <div class="col-xl-5 col-md-12">
                     <div class="opening-img" data-aos-duration="1000" data-aos="fade-left">
-                        <img src="/img/opening/opening.jpg" alt="">
+                        <img src="/img/opening/opening2.jpg" alt="">
                     </div>
                 </div>
             </div>
@@ -402,7 +402,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-xl-4 col-md-12">
-                    <div class="image left" data-aos-duration="1000" data-aos="fade-right"><img src="/img/map/map1.jpg" alt=""></div>
+                    <div class="image left" data-aos-duration="1000" data-aos="fade-right"><img src="/img/map/map4.jpg" alt=""></div>
                 </div>
                 <div class="col-xl-4 col-md-12">
                     <div class="content">
@@ -421,7 +421,7 @@
                 </div>
                 <div class="col-xl-4 col-md-12" data-aos-duration="1000" data-aos="fade-left">
                     <div class="image right">
-                        <img src="/img/map/map.png" alt="">
+                        <img src="/img/map/map3.png" alt="">
                     </div>
                 </div>
             </div>
