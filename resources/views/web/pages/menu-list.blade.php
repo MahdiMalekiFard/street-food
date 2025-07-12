@@ -43,9 +43,9 @@
                                                 <h5 class="name">
                                                     <span class="txt full-title">{{ $menuItem?->title }}</span>
                                                     <span class="txt title-with-price">
-                                                        {{ $menuItem?->title }} <br class="break-point"> ( <span class="p-price">{{ $menuItem?->special_price }}</span> kr )
+                                                        {{ $menuItem?->title }} <br class="break-point"> ( <span class="p-price">{{ $menuItem?->special_price }}</span> € )
                                                     </span>
-                                                    <span class="price">{{ $menuItem?->special_price }} kr</span>
+                                                    <span class="price">{{ $menuItem?->special_price }} €</span>
                                                 </h5>
                                                 <p>{{ $menuItem?->description }}</p>
                                             </li>
@@ -58,9 +58,9 @@
                                                     <h5 class="name">
                                                         <span class="txt full-title">{{ $menuItem?->title }}</span>
                                                         <span class="txt title-with-price">
-                                                            {{ $menuItem?->title }} <br class="break-point"> ( <span class="p-price">{{ $menuItem?->special_price }}</span> kr )
+                                                            {{ $menuItem?->title }} <br class="break-point"> ( <span class="p-price">{{ $menuItem?->special_price }}</span> € )
                                                         </span>
-                                                        <span class="price">{{ $menuItem?->special_price }} kr</span>
+                                                        <span class="price">{{ $menuItem?->special_price }} €</span>
                                                     </h5>
                                                     <p>{{ $menuItem?->description }}</p>
                                                 </li>
@@ -76,9 +76,9 @@
                                                 <h5 class="name">
                                                     <span class="txt full-title">{{ $menuItem?->title }}</span>
                                                     <span class="txt title-with-price">
-                                                        {{ $menuItem?->title }} <br class="break-point"> ( <span class="p-price">{{ $menuItem?->special_price }}</span> kr )
+                                                        {{ $menuItem?->title }} <br class="break-point"> ( <span class="p-price">{{ $menuItem?->special_price }}</span> € )
                                                     </span>
-                                                    <span class="price">{{ $menuItem?->special_price }} kr</span>
+                                                    <span class="price">{{ $menuItem?->special_price }} €</span>
                                                 </h5>
                                                 <p>{{ $menuItem?->description }}</p>
                                             </li>
@@ -94,9 +94,9 @@
                                                     <h5 class="name">
                                                         <span class="txt full-title">{{ $menuItem?->title }}</span>
                                                         <span class="txt title-with-price">
-                                                            {{ $menuItem?->title }} <br class="break-point"> ( <span class="p-price">{{ $menuItem?->special_price }}</span> kr )
+                                                            {{ $menuItem?->title }} <br class="break-point"> ( <span class="p-price">{{ $menuItem?->special_price }}</span> € )
                                                         </span>
-                                                        <span class="price">{{ $menuItem?->special_price }} kr</span>
+                                                        <span class="price">{{ $menuItem?->special_price }} €</span>
                                                     </h5>
                                                     <p>{{ $menuItem?->description }}</p>
                                                 </li>

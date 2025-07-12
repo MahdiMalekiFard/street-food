@@ -182,9 +182,9 @@
                                                     <h5 class="name">
                                                         <span class="txt full-title">{{ $menuItem->title }}</span>
                                                         <span class="title-with-price">
-                                                            {{ $menuItem?->title }}  ( <span class="p-price">{{ $menuItem?->special_price }}</span> kr )
+                                                            {{ $menuItem?->title }}  ( <span class="p-price">{{ $menuItem?->special_price }}</span> € )
                                                         </span>
-                                                        <span class="price">{{ $menuItem->special_price }} kr</span>
+                                                        <span class="price">{{ $menuItem->special_price }} €</span>
                                                     </h5>
                                                     <p>{{ $menuItem->description }}</p>
                                                 </li>
