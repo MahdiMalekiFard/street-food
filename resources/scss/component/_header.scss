@@ -357,59 +357,91 @@
 
 .btn-side {
     position: relative;
-    width: 37px;
-    padding: 12px 0;
+    width: 42px;
+    height: 42px;
+    background: rgba($color-hover, 0.06);
+    border: 1px solid rgba($color-hover, 0.2);
+    border-radius: 10px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    overflow: visible;
 
-    span {
-        position: absolute;
-        width: 100%;
-        height: 2px;
-        left: 0;
-        top: 50%;
-        overflow: hidden;
-        text-indent: 200%;
-        background: $color-hover;
-        @include transition3;
-
+    &:hover {
+        background: rgba($color-hover, 0.12);
+        border-color: rgba($color-hover, 0.4);
+        transform: scale(1.05);
+        box-shadow: 0 4px 15px rgba($color-hover, 0.2);
+        
+        .dot {
+            background: lighten($color-hover, 8%);
+            box-shadow: 0 0 6px rgba($color-hover, 0.4);
+        }
     }
 
+    .dot {
+        position: absolute;
+        width: 4px;
+        height: 4px;
+        background: $color-hover;
+        border-radius: 50%;
+        transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        
+        &:nth-child(1) { transform: translate(-7px, -7px); }
+        &:nth-child(2) { transform: translate(0, -7px); }
+        &:nth-child(3) { transform: translate(7px, -7px); }
+        &:nth-child(4) { transform: translate(-7px, 0); }
+        &:nth-child(5) { transform: translate(0, 0); }
+        &:nth-child(6) { transform: translate(7px, 0); }
+        &:nth-child(7) { transform: translate(-7px, 7px); }
+        &:nth-child(8) { transform: translate(0, 7px); }
+        &:nth-child(9) { transform: translate(7px, 7px); }
+    }
+
+    &.active {
+        width: 60px;
+        height: 60px;
+        background: rgba($color-hover, 0.15);
+        border-color: rgba($color-hover, 0.6);
+        border-width: 2px;
+        border-radius: 16px;
+        transform: scale(1.05);
+        padding: 8px;
+        
+        .dot {
+            width: 6px;
+            height: 6px;
+            background: lighten($color-hover, 12%);
+            box-shadow: 0 0 8px rgba($color-hover, 0.6);
+            
+            // Show diagonal dots to form cross (X) pattern
+            &:nth-child(1) { transform: translate(-12px, -12px) scale(1.4); } // Top-left
+            &:nth-child(2) { transform: scale(0); opacity: 0; }
+            &:nth-child(3) { transform: translate(12px, -12px) scale(1.4); }  // Top-right
+            &:nth-child(4) { transform: scale(0); opacity: 0; }
+            &:nth-child(5) { transform: translate(0, 0) scale(1.6); }         // Center
+            &:nth-child(6) { transform: scale(0); opacity: 0; }
+            &:nth-child(7) { transform: translate(-12px, 12px) scale(1.4); }  // Bottom-left
+            &:nth-child(8) { transform: scale(0); opacity: 0; }
+            &:nth-child(9) { transform: translate(12px, 12px) scale(1.4); }   // Bottom-right
+        }
+    }
+
+    &.active:hover {
+        // No additional styling when active and hovered - stays the same as active state
+    }
+
+    // Hide other elements
     &::before,
     &::after {
-        content: '';
-        position: absolute;
-        left: -11px;
-        width: 37px;
-        height: 2px;
-        background: $color-hover;
-        @include transition3;
+        display: none;
     }
 
-    &::before {
-        top: 0
-    }
-
-    &::after {
-        bottom: 0;
-    }
-
-
-
-    &.active span {
-        opacity: 0;
-    }
-
-    &.active:before {
-        -webkit-transform: rotate3d(0, 0, 1, 45deg);
-        -moz-transform: rotate3d(0, 0, 1, 45deg);
-        transform: rotate3d(0, 0, 1, 45deg);
-        top: auto;
-    }
-
-    &.active:after {
-        -webkit-transform: rotate3d(0, 0, 1, -45deg);
-        -moz-transform: rotate3d(0, 0, 1, -45deg);
-        transform: rotate3d(0, 0, 1, -45deg);
-        bottom: auto;
+    .center-line,
+    span {
+        display: none;
     }
 }
 

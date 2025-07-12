@@ -110,7 +110,15 @@
 
                 <div class="sidebar-btn">
                     <a class="btn-side">
-                        <span></span>
+                        <div class="dot"></div>
+                        <div class="dot"></div>
+                        <div class="dot"></div>
+                        <div class="dot"></div>
+                        <div class="dot"></div>
+                        <div class="dot"></div>
+                        <div class="dot"></div>
+                        <div class="dot"></div>
+                        <div class="dot"></div>
                     </a>
                     <div class="sidebar-content">
                         <img class="sidebar__logo" src="/img/logo2.png" alt="">

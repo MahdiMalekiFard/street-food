@@ -21,10 +21,6 @@
                                                     <img src="{{ $base?->getFirstMediaUrl('image') ?? '#' }}" alt="">
                                                 </a>
                                             </div>
-                                            <div class="meta">
-                                                <h4>{{ $base?->updated_at->format('y') }}</h4>
-                                                <p>{{ $base?->updated_at->format('M d') }}</p>
-                                            </div>
                                             <a href="{{ route('home-by-base', ['locale' => app()->getLocale(), 'base' => $base->slug]) }}" class="h5 title">{{ $base?->title }}</a>
                                         </div>
                                     </div>
