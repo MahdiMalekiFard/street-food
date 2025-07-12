@@ -23,6 +23,10 @@
 }
 
 @include res1600 {
+    #main-nav .menu li {
+        margin-right: 30px;
+    }
+
     .home-2 .s-menu .flat-tabs {
         .content-tab .menu-list {
             max-width: unset;
@@ -156,9 +160,10 @@
 }
 
 @include res1380 {
-    #main-nav .menu li {
-        margin-right: 30px;
+    .header #site-header-inner .tf-button {
+        display: none;
     }
+    
     .comingsoon .comingsoon-main .js-countdown .countdown__timer .countdown__item {
         margin: 0 50px;
     }
@@ -204,9 +209,7 @@
             text-align: center;
         }
     }
-    .header #site-header-inner .tf-button {
-        display: none;
-    }
+    
     .s-menu .flat-tabs .content-tab .left-img, .s-menu .flat-tabs .content-tab .right-img {
         position: static;
         margin: 0 20px 60px;
