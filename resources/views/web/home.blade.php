@@ -389,7 +389,7 @@
                                 <p class="cate">{{ implode(' - ', $portfolio?->categories->pluck('title')->toArray()) }}</p>
                                 <div class="line"></div>
                                 <p class="text">{{ Str::words($portfolio?->description ?? $portfolio?->body, 14) }}</p>
-                                <a href="{{ route('portfolio-detail', ['locale' => app()->getLocale(), 'portfolio' => $portfolio?->slug]) }}" class="action"><i class="fa fa-arrow-right"></i></a>
+                                <a href="{{ route('portfolio-detail', ['locale' => app()->getLocale(), 'portfolio' => $portfolio?->slug, 'base' => $base?->slug]) }}" class="action"><i class="fa fa-arrow-right"></i></a>
                             </div>
                         </div>
                     @endforeach

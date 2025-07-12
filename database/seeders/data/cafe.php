@@ -334,6 +334,171 @@ return [
             'base_id'         => 2,
             'image'           => public_path('img/portfolio/gallery-6.jpg'),
         ],
+        [
+            'title'           => 'albacore tuna broccoli',
+            'description'     => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque fringilla semper nulla in pulvinar.',
+            'body'            => '
+<p class="aos-init aos-animate" data-aos-duration="1000" data-aos="fade-up">Sed est risus, dignissim quis nisl et, semper convallis lacus. Vestibulum semper interdum dui in pretium. Nam dapibus ac odio non pellentesque. In in fermentum mi, eget egestas eros. Nunc venenatis iaculis massa sit amet luctus. Aliquam et ligula ut arcu suscipit efficitur. Sed ut ante quam. Duis et finibus magna. Maecenas vitae neque augue.</p>
+<p class="mb-42 aos-init aos-animate" data-aos-duration="1000" data-aos="fade-up">Integer ornare magna purus, sed faucibus ipsum luctus sit amet. Fusce euismod leo eget ex commodo auctor. Praesent id nisl at felis ultrices laoreet nec sit amet libero.</p>
+<h5 class="aos-init aos-animate" data-aos-duration="1000" data-aos="fade-up"><strong>element</strong></h5>
+<p class="mb-42 aos-init aos-animate" data-aos-duration="1000" data-aos="fade-up">With specific ingredients: Tuna accounted for 43%, cabbage 8%, potatoes and carrots 7%. The rest is soybean oil, sweet corn, peas, chili sauce, ketchup, wheat. With spices, flavor enhancers and yeast extracts</p>
+<h5 class="aos-init aos-animate" data-aos-duration="1000" data-aos="fade-up"><strong>nutrition</strong></h5>
+<div class="bot d-flex">
+    <ul>
+        <li class="aos-init aos-animate" data-aos-duration="1000" data-aos="fade-up">Calories: 191</li>
+        <li class="aos-init aos-animate" data-aos-duration="1000" data-aos="fade-up">Fat: 1.4g</li>
+        <li class="aos-init aos-animate" data-aos-duration="1000" data-aos="fade-up">Sodium: 83mg</li>
+        <li class="aos-init" data-aos-duration="1000" data-aos="fade-up">Carbohydrates: 0g</li>
+    </ul>
+    <ul>
+        <li class="aos-init aos-animate" data-aos-duration="1000" data-aos="fade-up">Fiber: 0g</li>
+        <li class="aos-init aos-animate" data-aos-duration="1000" data-aos="fade-up">Sugar: 0g</li>
+        <li class="aos-init aos-animate" data-aos-duration="1000" data-aos="fade-up">Protein: 42g</li>
+    </ul>
+</div>
+<p class="text aos-init" data-aos-duration="1000" data-aos="fade-up">About fat: Tuna contains healthy fats like omega 3 fatty acids but is low in fat overall (less than 2 grams per can). However, different types of tuna will have different amounts of fat. The following tuna varieties are listed in order from fattest to least fatty: fresh bluefin, canned white albacore, canned light tuna, fresh skipjack and fresh yellowfin.</p>
+<p class="aos-init" data-aos-duration="1000" data-aos="fade-up">About protein: Tuna is a protein-rich food. One can of tuna contains 42 grams of complete protein and many essential amino acids.</p>
+            ',
+            'slug'            => 'albacore-tuna-broccoli-7',
+            'seo_title'       => 'albacore tuna broccoli',
+            'seo_description' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque fringilla semper nulla in pulvinar.',
+            'published'       => true,
+            'languages'       => ['en'],
+            'base_id'         => 3,
+            'image'           => public_path('img/portfolio/gallery-4.jpg'),
+        ],
+        [
+            'title'           => 'albacore tuna broccoli',
+            'description'     => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque fringilla semper nulla in pulvinar.',
+            'body'            => '
+<p class="aos-init aos-animate" data-aos-duration="1000" data-aos="fade-up">Sed est risus, dignissim quis nisl et, semper convallis lacus. Vestibulum semper interdum dui in pretium. Nam dapibus ac odio non pellentesque. In in fermentum mi, eget egestas eros. Nunc venenatis iaculis massa sit amet luctus. Aliquam et ligula ut arcu suscipit efficitur. Sed ut ante quam. Duis et finibus magna. Maecenas vitae neque augue.</p>
+<p class="mb-42 aos-init aos-animate" data-aos-duration="1000" data-aos="fade-up">Integer ornare magna purus, sed faucibus ipsum luctus sit amet. Fusce euismod leo eget ex commodo auctor. Praesent id nisl at felis ultrices laoreet nec sit amet libero.</p>
+<h5 class="aos-init aos-animate" data-aos-duration="1000" data-aos="fade-up"><strong>element</strong></h5>
+<p class="mb-42 aos-init aos-animate" data-aos-duration="1000" data-aos="fade-up">With specific ingredients: Tuna accounted for 43%, cabbage 8%, potatoes and carrots 7%. The rest is soybean oil, sweet corn, peas, chili sauce, ketchup, wheat. With spices, flavor enhancers and yeast extracts</p>
+<h5 class="aos-init aos-animate" data-aos-duration="1000" data-aos="fade-up"><strong>nutrition</strong></h5>
+<div class="bot d-flex">
+    <ul>
+        <li class="aos-init aos-animate" data-aos-duration="1000" data-aos="fade-up">Calories: 191</li>
+        <li class="aos-init aos-animate" data-aos-duration="1000" data-aos="fade-up">Fat: 1.4g</li>
+        <li class="aos-init aos-animate" data-aos-duration="1000" data-aos="fade-up">Sodium: 83mg</li>
+        <li class="aos-init" data-aos-duration="1000" data-aos="fade-up">Carbohydrates: 0g</li>
+    </ul>
+    <ul>
+        <li class="aos-init aos-animate" data-aos-duration="1000" data-aos="fade-up">Fiber: 0g</li>
+        <li class="aos-init aos-animate" data-aos-duration="1000" data-aos="fade-up">Sugar: 0g</li>
+        <li class="aos-init aos-animate" data-aos-duration="1000" data-aos="fade-up">Protein: 42g</li>
+    </ul>
+</div>
+<p class="text aos-init" data-aos-duration="1000" data-aos="fade-up">About fat: Tuna contains healthy fats like omega 3 fatty acids but is low in fat overall (less than 2 grams per can). However, different types of tuna will have different amounts of fat. The following tuna varieties are listed in order from fattest to least fatty: fresh bluefin, canned white albacore, canned light tuna, fresh skipjack and fresh yellowfin.</p>
+<p class="aos-init" data-aos-duration="1000" data-aos="fade-up">About protein: Tuna is a protein-rich food. One can of tuna contains 42 grams of complete protein and many essential amino acids.</p>
+            ',
+            'slug'            => 'albacore-tuna-broccoli-8',
+            'seo_title'       => 'albacore tuna broccoli',
+            'seo_description' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque fringilla semper nulla in pulvinar.',
+            'published'       => true,
+            'languages'       => ['en'],
+            'base_id'         => 3,
+            'image'           => public_path('img/portfolio/gallery-5.jpg'),
+        ],
+        [
+            'title'           => 'albacore tuna broccoli',
+            'description'     => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque fringilla semper nulla in pulvinar.',
+            'body'            => '
+<p class="aos-init aos-animate" data-aos-duration="1000" data-aos="fade-up">Sed est risus, dignissim quis nisl et, semper convallis lacus. Vestibulum semper interdum dui in pretium. Nam dapibus ac odio non pellentesque. In in fermentum mi, eget egestas eros. Nunc venenatis iaculis massa sit amet luctus. Aliquam et ligula ut arcu suscipit efficitur. Sed ut ante quam. Duis et finibus magna. Maecenas vitae neque augue.</p>
+<p class="mb-42 aos-init aos-animate" data-aos-duration="1000" data-aos="fade-up">Integer ornare magna purus, sed faucibus ipsum luctus sit amet. Fusce euismod leo eget ex commodo auctor. Praesent id nisl at felis ultrices laoreet nec sit amet libero.</p>
+<h5 class="aos-init aos-animate" data-aos-duration="1000" data-aos="fade-up"><strong>element</strong></h5>
+<p class="mb-42 aos-init aos-animate" data-aos-duration="1000" data-aos="fade-up">With specific ingredients: Tuna accounted for 43%, cabbage 8%, potatoes and carrots 7%. The rest is soybean oil, sweet corn, peas, chili sauce, ketchup, wheat. With spices, flavor enhancers and yeast extracts</p>
+<h5 class="aos-init aos-animate" data-aos-duration="1000" data-aos="fade-up"><strong>nutrition</strong></h5>
+<div class="bot d-flex">
+    <ul>
+        <li class="aos-init aos-animate" data-aos-duration="1000" data-aos="fade-up">Calories: 191</li>
+        <li class="aos-init aos-animate" data-aos-duration="1000" data-aos="fade-up">Fat: 1.4g</li>
+        <li class="aos-init aos-animate" data-aos-duration="1000" data-aos="fade-up">Sodium: 83mg</li>
+        <li class="aos-init" data-aos-duration="1000" data-aos="fade-up">Carbohydrates: 0g</li>
+    </ul>
+    <ul>
+        <li class="aos-init aos-animate" data-aos-duration="1000" data-aos="fade-up">Fiber: 0g</li>
+        <li class="aos-init aos-animate" data-aos-duration="1000" data-aos="fade-up">Sugar: 0g</li>
+        <li class="aos-init aos-animate" data-aos-duration="1000" data-aos="fade-up">Protein: 42g</li>
+    </ul>
+</div>
+<p class="text aos-init" data-aos-duration="1000" data-aos="fade-up">About fat: Tuna contains healthy fats like omega 3 fatty acids but is low in fat overall (less than 2 grams per can). However, different types of tuna will have different amounts of fat. The following tuna varieties are listed in order from fattest to least fatty: fresh bluefin, canned white albacore, canned light tuna, fresh skipjack and fresh yellowfin.</p>
+<p class="aos-init" data-aos-duration="1000" data-aos="fade-up">About protein: Tuna is a protein-rich food. One can of tuna contains 42 grams of complete protein and many essential amino acids.</p>
+            ',
+            'slug'            => 'albacore-tuna-broccoli-9',
+            'seo_title'       => 'albacore tuna broccoli',
+            'seo_description' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque fringilla semper nulla in pulvinar.',
+            'published'       => true,
+            'languages'       => ['en'],
+            'base_id'         => 3,
+            'image'           => public_path('img/portfolio/gallery-6.jpg'),
+        ],
+        [
+            'title'           => 'albacore tuna broccoli',
+            'description'     => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque fringilla semper nulla in pulvinar.',
+            'body'            => '
+<p class="aos-init aos-animate" data-aos-duration="1000" data-aos="fade-up">Sed est risus, dignissim quis nisl et, semper convallis lacus. Vestibulum semper interdum dui in pretium. Nam dapibus ac odio non pellentesque. In in fermentum mi, eget egestas eros. Nunc venenatis iaculis massa sit amet luctus. Aliquam et ligula ut arcu suscipit efficitur. Sed ut ante quam. Duis et finibus magna. Maecenas vitae neque augue.</p>
+<p class="mb-42 aos-init aos-animate" data-aos-duration="1000" data-aos="fade-up">Integer ornare magna purus, sed faucibus ipsum luctus sit amet. Fusce euismod leo eget ex commodo auctor. Praesent id nisl at felis ultrices laoreet nec sit amet libero.</p>
+<h5 class="aos-init aos-animate" data-aos-duration="1000" data-aos="fade-up"><strong>element</strong></h5>
+<p class="mb-42 aos-init aos-animate" data-aos-duration="1000" data-aos="fade-up">With specific ingredients: Tuna accounted for 43%, cabbage 8%, potatoes and carrots 7%. The rest is soybean oil, sweet corn, peas, chili sauce, ketchup, wheat. With spices, flavor enhancers and yeast extracts</p>
+<h5 class="aos-init aos-animate" data-aos-duration="1000" data-aos="fade-up"><strong>nutrition</strong></h5>
+<div class="bot d-flex">
+    <ul>
+        <li class="aos-init aos-animate" data-aos-duration="1000" data-aos="fade-up">Calories: 191</li>
+        <li class="aos-init aos-animate" data-aos-duration="1000" data-aos="fade-up">Fat: 1.4g</li>
+        <li class="aos-init aos-animate" data-aos-duration="1000" data-aos="fade-up">Sodium: 83mg</li>
+        <li class="aos-init" data-aos-duration="1000" data-aos="fade-up">Carbohydrates: 0g</li>
+    </ul>
+    <ul>
+        <li class="aos-init aos-animate" data-aos-duration="1000" data-aos="fade-up">Fiber: 0g</li>
+        <li class="aos-init aos-animate" data-aos-duration="1000" data-aos="fade-up">Sugar: 0g</li>
+        <li class="aos-init aos-animate" data-aos-duration="1000" data-aos="fade-up">Protein: 42g</li>
+    </ul>
+</div>
+<p class="text aos-init" data-aos-duration="1000" data-aos="fade-up">About fat: Tuna contains healthy fats like omega 3 fatty acids but is low in fat overall (less than 2 grams per can). However, different types of tuna will have different amounts of fat. The following tuna varieties are listed in order from fattest to least fatty: fresh bluefin, canned white albacore, canned light tuna, fresh skipjack and fresh yellowfin.</p>
+<p class="aos-init" data-aos-duration="1000" data-aos="fade-up">About protein: Tuna is a protein-rich food. One can of tuna contains 42 grams of complete protein and many essential amino acids.</p>
+            ',
+            'slug'            => 'albacore-tuna-broccoli-10',
+            'seo_title'       => 'albacore tuna broccoli',
+            'seo_description' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque fringilla semper nulla in pulvinar.',
+            'published'       => true,
+            'languages'       => ['en'],
+            'base_id'         => 4,
+            'image'           => public_path('img/portfolio/gallery-5.jpg'),
+        ],
+        [
+            'title'           => 'albacore tuna broccoli',
+            'description'     => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque fringilla semper nulla in pulvinar.',
+            'body'            => '
+<p class="aos-init aos-animate" data-aos-duration="1000" data-aos="fade-up">Sed est risus, dignissim quis nisl et, semper convallis lacus. Vestibulum semper interdum dui in pretium. Nam dapibus ac odio non pellentesque. In in fermentum mi, eget egestas eros. Nunc venenatis iaculis massa sit amet luctus. Aliquam et ligula ut arcu suscipit efficitur. Sed ut ante quam. Duis et finibus magna. Maecenas vitae neque augue.</p>
+<p class="mb-42 aos-init aos-animate" data-aos-duration="1000" data-aos="fade-up">Integer ornare magna purus, sed faucibus ipsum luctus sit amet. Fusce euismod leo eget ex commodo auctor. Praesent id nisl at felis ultrices laoreet nec sit amet libero.</p>
+<h5 class="aos-init aos-animate" data-aos-duration="1000" data-aos="fade-up"><strong>element</strong></h5>
+<p class="mb-42 aos-init aos-animate" data-aos-duration="1000" data-aos="fade-up">With specific ingredients: Tuna accounted for 43%, cabbage 8%, potatoes and carrots 7%. The rest is soybean oil, sweet corn, peas, chili sauce, ketchup, wheat. With spices, flavor enhancers and yeast extracts</p>
+<h5 class="aos-init aos-animate" data-aos-duration="1000" data-aos="fade-up"><strong>nutrition</strong></h5>
+<div class="bot d-flex">
+    <ul>
+        <li class="aos-init aos-animate" data-aos-duration="1000" data-aos="fade-up">Calories: 191</li>
+        <li class="aos-init aos-animate" data-aos-duration="1000" data-aos="fade-up">Fat: 1.4g</li>
+        <li class="aos-init aos-animate" data-aos-duration="1000" data-aos="fade-up">Sodium: 83mg</li>
+        <li class="aos-init" data-aos-duration="1000" data-aos="fade-up">Carbohydrates: 0g</li>
+    </ul>
+    <ul>
+        <li class="aos-init aos-animate" data-aos-duration="1000" data-aos="fade-up">Fiber: 0g</li>
+        <li class="aos-init aos-animate" data-aos-duration="1000" data-aos="fade-up">Sugar: 0g</li>
+        <li class="aos-init aos-animate" data-aos-duration="1000" data-aos="fade-up">Protein: 42g</li>
+    </ul>
+</div>
+<p class="text aos-init" data-aos-duration="1000" data-aos="fade-up">About fat: Tuna contains healthy fats like omega 3 fatty acids but is low in fat overall (less than 2 grams per can). However, different types of tuna will have different amounts of fat. The following tuna varieties are listed in order from fattest to least fatty: fresh bluefin, canned white albacore, canned light tuna, fresh skipjack and fresh yellowfin.</p>
+<p class="aos-init" data-aos-duration="1000" data-aos="fade-up">About protein: Tuna is a protein-rich food. One can of tuna contains 42 grams of complete protein and many essential amino acids.</p>
+            ',
+            'slug'            => 'albacore-tuna-broccoli-11',
+            'seo_title'       => 'albacore tuna broccoli',
+            'seo_description' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque fringilla semper nulla in pulvinar.',
+            'published'       => true,
+            'languages'       => ['en'],
+            'base_id'         => 4,
+            'image'           => public_path('img/portfolio/gallery-6.jpg'),
+        ],
     ],
 
     'menus' => [
@@ -372,6 +537,42 @@ return [
             'image'       => public_path('img/menu/menu3.jpg'),
             'left_image'  => public_path('img/menu/menu1.jpg'),
             'right_image' => public_path('img/menu/menu.jpg'),
+        ],
+        [
+            'title'       => 'Fisch und Meeresfrüchte',
+            'description' => 'Frisch aus dem Meer auf Ihren Teller',
+            'published'   => 1,
+            'base_id'     => 3,
+            'image'       => public_path('img/menu/menu-zz-3.jpg'),
+            'left_image'  => public_path('img/menu/menu.jpg'),
+            'right_image' => public_path('img/menu/menu1.jpg'),
+        ],
+        [
+            'title'       => 'Nachtisch',
+            'description' => 'Süße Enden und genussvolle Anfänge',
+            'published'   => 1,
+            'base_id'     => 3,
+            'image'       => public_path('img/menu/menu3.jpg'),
+            'left_image'  => public_path('img/menu/menu1.jpg'),
+            'right_image' => public_path('img/menu/menu.jpg'),
+        ],
+        [
+            'title'       => 'Fisch und Meeresfrüchte',
+            'description' => 'Frisch aus dem Meer auf Ihren Teller',
+            'published'   => 1,
+            'base_id'     => 4,
+            'image'       => public_path('img/menu/menu-zz-3.jpg'),
+            'left_image'  => public_path('img/menu/menu.jpg'),
+            'right_image' => public_path('img/menu/menu1.jpg'),
+        ],
+        [
+            'title'       => 'Nachtisch',
+            'description' => 'Süße Enden und genussvolle Anfänge',
+            'published'   => 1,
+            'base_id'     => 4,
+            'image'       => public_path('img/menu/menu3.jpg'),
+            'left_image'  => public_path('img/menu/menu1.jpg'),
+            'right_image' => public_path('img/menu/menu.jpg'),
         ]
     ],
 
@@ -403,21 +604,7 @@ return [
             'published'     => 1,
             'normal_price'  => 44,
             'special_price' => 44,
-        ],
-        [
-            'title'         => 'Garnelen Avocado Salat',
-            'description'   => 'Saftiger Hummerschwanz, gebacken mit einer cremigen Weißweinsauce.',
-            'published'     => 1,
-            'normal_price'  => 38,
-            'special_price' => 35,
-        ],
-        [
-            'title'         => 'Klassischer Fish & Chips',
-            'description'   => 'Saftiger Hummerschwanz, gebacken mit einer cremigen Weißweinsauce.',
-            'published'     => 1,
-            'normal_price'  => 39,
-            'special_price' => 19,
-        ],
+        ]
     ],
 
     'opinions' => [

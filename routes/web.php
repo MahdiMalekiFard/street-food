@@ -46,7 +46,7 @@ Route::group(['prefix' => '{locale?}', 'where' => ['locale' => '[a-zA-Z]{2}']], 
         return view('web.select_base', compact('bases'));
     })->name('index');
 
-    Route::get('/{base:slug}', function ($locale, $slug, Request $request) {
+    Route::get('/{base:slug}', function ($locale, $slug) {
         $base = resolve(BaseCategoryRepositoryInterface::class)->find($slug, 'slug', firstOrFail: true);
         session(['base_id' => $base->id]);
         return GetContentByBaseAction::run($base->id);
@@ -57,13 +57,13 @@ Route::group(['prefix' => '{locale?}', 'where' => ['locale' => '[a-zA-Z]{2}']], 
         Route::group(['prefix' => '{base:slug}'], function () {
             Route::get('/menu-list', [MenuController::class, 'menuList'])->name('menu-list');
             Route::get('/portfolio-list', [PortfolioController::class, 'portfolioList'])->name('portfolio-list');
+            Route::get('/portfolio-detail/{portfolio:slug}', [PortfolioController::class, 'portfolioDetail'])->name('portfolio-detail');
             Route::get('/gallery-list', [ArtGalleryController::class, 'galleryList'])->name('gallery-list');
+            Route::get('/gallery-detail/{artGallery:id}', [ArtGalleryController::class, 'galleryDetail'])->name('gallery-detail');
         });
         Route::get('/blog-list', [BlogController::class, 'blogList'])->name('blog-list');
         Route::get('/blog-detail/{blog:slug}', [BlogController::class, 'blogDetail'])->name('blog-detail');
-        Route::get('/portfolio-detail/{portfolio:slug}', [PortfolioController::class, 'portfolioDetail'])->name('portfolio-detail');
         Route::get('/about-us', [PageController::class, 'about'])->name('about-us');
-        Route::get('/gallery-detail/{artGallery:id}', [ArtGalleryController::class, 'galleryDetail'])->name('gallery-detail');
         Route::get('/contact-us-page', [ContactController::class, 'contactUs'])->name('contact-us-page');
         Route::post('/contact-from-web', [ContactController::class, 'storeContactFromWeb'])->name('store-contact-from-web');
     });

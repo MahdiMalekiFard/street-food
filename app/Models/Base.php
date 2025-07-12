@@ -61,6 +61,16 @@ class Base extends Model implements HasMedia
     |--------------------------------------------------------------------------
     */
 
+    public function portfolios()
+    {
+        return $this->hasMany(Portfolio::class, 'base_id');
+    }
+
+    public function artGalleries()
+    {
+        return $this->hasMany(ArtGallery::class, 'base_id');
+    }
+
 
     /*
     |--------------------------------------------------------------------------

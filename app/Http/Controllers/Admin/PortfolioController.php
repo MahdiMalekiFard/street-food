@@ -158,11 +158,11 @@ class PortfolioController extends BaseWebController
             'published' => BooleanEnum::ENABLE,
         ])->where('base_id', $baseId)->get();
 
-        return view('web.pages.portfolio-list', compact('portfolios'));
+        return view('web.pages.portfolio-list', compact('portfolios', 'base'));
     }
 
-    public function portfolioDetail(string $locale, Portfolio $portfolio)
+    public function portfolioDetail(string $locale, Base $base, Portfolio $portfolio)
     {
-        return view('web.pages.portfolio-detail', compact('portfolio'));
+        return view('web.pages.portfolio-detail', compact('portfolio', 'base'));
     }
 }

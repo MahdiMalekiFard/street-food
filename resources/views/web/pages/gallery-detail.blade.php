@@ -11,9 +11,9 @@
                             <h2 class="title">{{ trans('page.pages.gallery.detail.page_title') }}</h2>
 
                             <ul class="breacrumd">
-                                <li><a href="/">{{ trans('home.header.home') }} </a></li>
+                                <li><a href="{{ route('home-by-base', ['locale' => app()->getLocale(), 'base' => $base?->slug]) }}">{{ trans('home.header.home') }} </a></li>
                                 <li>/</li>
-                                <li><a href="{{ route('gallery-list', ['locale' => app()->getLocale()]) }}">{{ trans('page.pages.gallery.list.breadcrumb') }} </a></li>
+                                <li><a href="{{ route('gallery-list', ['locale' => app()->getLocale(), 'base' => $base?->slug]) }}">{{ trans('page.pages.gallery.list.breadcrumb') }} </a></li>
                                 <li>/</li>
                                 <li>{{ trans('page.pages.gallery.detail.breadcrumb') }}</li>
                             </ul>

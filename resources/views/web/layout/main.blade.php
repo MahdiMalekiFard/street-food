@@ -70,7 +70,11 @@
                     $base = \App\Models\Base::find(session('base_id'));
                 @endphp
                 <div class="header__logo">
-                    <a href="{{ request()->routeIs('home-by-base') ? route('home-by-base', ['locale' => app()->getLocale(), 'base' => $base?->slug]) : route('index') }}"><img src="{{ asset('img/logo.png') }}" alt="St.Pauli Street Food logo"></a>
+                    @if($base)
+                        <a href="{{ route('home-by-base', ['locale' => app()->getLocale(), 'base' => $base?->slug]) }}"><img src="{{ asset('img/logo.png') }}" alt="St.Pauli Street Food logo"></a>
+                    @else
+                        <a href="/"><img src="{{ asset('img/logo.png') }}" alt="St.Pauli Street Food logo"></a>
+                    @endif
                 </div>
                 <nav id="main-nav" class="main-nav">
                     <ul id="menu-primary-menu" class="menu">

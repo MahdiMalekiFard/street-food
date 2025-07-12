@@ -10,7 +10,7 @@
                             <h2 class="title">{{ trans('page.pages.menu.page_title') }}</h2>
 
                             <ul class="breacrumd">
-                                <li><a href="/">{{ trans('home.header.home') }} </a></li>
+                                <li><a href="{{ route('home-by-base', ['locale' => app()->getLocale(), 'base' => $base?->slug]) }}">{{ trans('home.header.home') }} </a></li>
                                 <li>/</li>
                                 <li>{{ trans('page.pages.menu.breadcrumb') }}</li>
                             </ul>

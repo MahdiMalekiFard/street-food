@@ -143,6 +143,6 @@ class MenuController extends BaseWebController
                             ->where('published', BooleanEnum::ENABLE)
                             ->where('base_id', $baseId)
                             ->get();
-        return view('web.pages.menu-list', compact('menus'));
+        return view('web.pages.menu-list', compact('menus', 'base'));
     }
 }

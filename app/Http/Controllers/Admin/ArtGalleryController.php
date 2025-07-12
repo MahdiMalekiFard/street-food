@@ -126,11 +126,11 @@ class ArtGalleryController extends BaseWebController
         $baseId = session('base_id');
 
         $artGalleries = $repository->query()->where('base_id', $baseId)->get();
-        return view('web.pages.gallery-list', compact('artGalleries'));
+        return view('web.pages.gallery-list', compact('artGalleries', 'base'));
     }
 
-    public function galleryDetail(string $locale, ArtGallery $artGallery)
+    public function galleryDetail(string $locale, Base $base, ArtGallery $artGallery)
     {
-        return view('web.pages.gallery-detail', compact('artGallery'));
+        return view('web.pages.gallery-detail', compact('artGallery', 'base'));
     }
 }

@@ -11,7 +11,7 @@
                             <h2 class="title">{{ trans('page.pages.gallery.list.page_title') }}</h2>
 
                             <ul class="breacrumd">
-                                <li><a href="/">{{ trans('home.header.home') }} </a></li>
+                                <li><a href="{{ route('home-by-base', ['locale' => app()->getLocale(), 'base' => $base?->slug]) }}">{{ trans('home.header.home') }} </a></li>
                                 <li>/</li>
                                 <li>{{ trans('page.pages.gallery.list.breadcrumb') }}</li>
                             </ul>
@@ -34,7 +34,7 @@
                                             <h5 class="name">{{ $artGallery?->title }}</h5>
                                             <div class="line"></div>
                                             <p class="text">{{ Str::words($artGallery?->description) }}</p>
-                                            <a href="{{ route('gallery-detail', ['locale' => app()->getLocale(), 'artGallery' => $artGallery?->id]) }}" class="action"><i class="fa fa-arrow-right"></i></a>
+                                            <a href="{{ route('gallery-detail', ['locale' => app()->getLocale(), 'artGallery' => $artGallery?->id, 'base' => $base?->slug]) }}" class="action"><i class="fa fa-arrow-right"></i></a>
                                         </div>
                                     </div>
                                 </div>

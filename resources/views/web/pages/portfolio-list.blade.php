@@ -11,7 +11,7 @@
                             <h2 class="title">{{ trans('page.pages.portfolio.list.page_title') }}</h2>
 
                             <ul class="breacrumd">
-                                <li><a href="/">{{ trans('home.header.home') }} </a></li>
+                                <li><a href="{{ route('home-by-base', ['locale' => app()->getLocale(), 'base' => $base?->slug]) }}">{{ trans('home.header.home') }} </a></li>
                                 <li>/</li>
                                 <li>{{ trans('page.pages.portfolio.list.breadcrumb') }}</li>
                             </ul>
@@ -33,7 +33,7 @@
                                     <p class="cate">{{ implode(' - ', $portfolio?->categories->pluck('title')->toArray()) }}</p>
                                     <div class="line"></div>
                                     <p class="text">{{ Str::words($portfolio?->description ?? $portfolio?->body, 12) }}</p>
-                                    <a href="{{ route('portfolio-detail', ['locale' => app()->getLocale(), 'portfolio' => $portfolio?->slug]) }}" class="action"><i class="fa fa-arrow-right"></i></a>
+                                    <a href="{{ route('portfolio-detail', ['locale' => app()->getLocale(), 'portfolio' => $portfolio?->slug, 'base' => $base?->slug]) }}" class="action"><i class="fa fa-arrow-right"></i></a>
                                 </div>
                             </div>
                         </div>
