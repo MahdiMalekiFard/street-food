@@ -2,6 +2,9 @@
 
 @section('content')
     <div class="p-about">
+        @php
+            $base = \App\Models\Base::find(session('base_id'));
+        @endphp
         <section class="page-title">
             <div class="container">
                 <div class="row">
@@ -11,7 +14,11 @@
                             <h2 class="title">{{ trans('page.pages.about_us') }}</h2>
 
                             <ul class="breacrumd">
-                                <li><a href="/">{{ trans('home.header.home') }} </a></li>
+                                @if($base)
+                                    <li><a href="{{ route('home-by-base', ['locale' => app()->getLocale(), 'base' => $base?->slug]) }}">{{ trans('home.header.home') }} </a></li>
+                                @else
+                                    <li><a href="/">{{ trans('home.header.home') }} </a></li>
+                                @endif
                                 <li>/</li>
                                 <li>{{ trans('page.pages.about_us') }}</li>
                             </ul>
