@@ -1,4 +1,5 @@
 @use '../abstracts' as *;
+@use 'sass:color';
 
 // topbar
 .top-bar {
@@ -376,7 +377,7 @@
         box-shadow: 0 4px 15px rgba($color-hover, 0.2);
         
         .dot {
-            background: lighten($color-hover, 8%);
+            background: color.adjust($color-hover, $lightness: 8%);
             box-shadow: 0 0 6px rgba($color-hover, 0.4);
         }
     }
@@ -413,7 +414,7 @@
         .dot {
             width: 6px;
             height: 6px;
-            background: lighten($color-hover, 12%);
+            background: color.adjust($color-hover, $lightness: 12%);
             box-shadow: 0 0 8px rgba($color-hover, 0.6);
             
             // Show diagonal dots to form cross (X) pattern

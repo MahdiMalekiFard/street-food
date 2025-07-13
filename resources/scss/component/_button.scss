@@ -1,4 +1,5 @@
 @use '../abstracts' as *;
+@use 'sass:color';
 
 /* button
 -------------------------------------------------------------- */
@@ -154,7 +155,7 @@
         }
 
         &:hover {
-            background-color: darken(#e82631, 10%);
+            background-color: color.adjust(#e82631, $lightness: -10%);
             box-shadow: 0 4px 12px rgba(0,0,0,0.2);
             transform: translateY(-1px);
         }
