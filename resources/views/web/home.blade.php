@@ -339,35 +339,41 @@
                         <h3 class="title" data-aos-duration="1000" data-aos="fade-up">{{ trans('home.blog.title') }}</h3>
                         <p class="text" data-aos-duration="1000" data-aos="fade-up">{{ trans('home.blog.subtitle') }}</p>
                     </div>
-
-                    <div class="swiper blogSwiper">
-                        <div class="swiper-wrapper">
-                            @foreach($blogs as $blog)
-                                <div class="swiper-slide">
-                                    <div class="blog-box">
-                                        <div class="top-content">
-                                            <div class="image">
-                                                <img src="{{ $blog?->getFirstMediaUrl('image') ?? '#' }}" alt="">
+                    <div class="blog-swiper-container">
+                        <div class="swiper blogSwiper">
+                            <div class="swiper-wrapper">
+                                @foreach($blogs as $blog)
+                                    <div class="swiper-slide">
+                                        <div class="blog-box">
+                                            <div class="top-content">
+                                                <div class="image">
+                                                    <img src="{{ $blog?->getFirstMediaUrl('image') ?? '#' }}" alt="">
+                                                </div>
+                                                <div class="meta">
+                                                    <h4>{{ $blog?->updated_at->format('y') }}</h4>
+                                                    <p>{{ $blog?->updated_at->format('M d') }}</p>
+                                                </div>
+                                                <a href="{{ route('blog-detail', ['locale' => app()->getLocale(), 'blog' => $blog?->slug]) }}" class="h5 title">{{ $blog?->title }}</a>
                                             </div>
-                                            <div class="meta">
-                                                <h4>{{ $blog?->updated_at->format('y') }}</h4>
-                                                <p>{{ $blog?->updated_at->format('M d') }}</p>
+                                            <div class="bottom-content">
+                                                <ul>
+                                                    <li class="author"><a href="#">by {{ $blog?->user?->name }}</a></li>
+                                                    <li class="category"><a href="#">{{ implode(', ', $blog?->categories->pluck('title')->toArray()) }}</a></li>
+                                                </ul>
+                                                <div class="line"></div>
+                                                <p class="text">{{ Str::words($blog?->description, 16) }}</p>
                                             </div>
-                                            <a href="{{ route('blog-detail', ['locale' => app()->getLocale(), 'blog' => $blog?->slug]) }}" class="h5 title">{{ $blog?->title }}</a>
-                                        </div>
-                                        <div class="bottom-content">
-                                            <ul>
-                                                <li class="author"><a href="#">by {{ $blog?->user?->name }}</a></li>
-                                                <li class="category"><a href="#">{{ implode(', ', $blog?->categories->pluck('title')->toArray()) }}</a></li>
-                                            </ul>
-                                            <div class="line"></div>
-                                            <p class="text">{{ Str::words($blog?->description, 16) }}</p>
                                         </div>
                                     </div>
-                                </div>
-                            @endforeach
+                                @endforeach
+                            </div>
+
+                            <!-- Navigation arrows -->
+                            <div class="swiper-button-next"></div>
+                            <div class="swiper-button-prev"></div>
                         </div>
                     </div>
+                    
 
                     <div class="block-text center">
                         <a href="{{ route('blog-list', ['locale' => app()->getLocale()]) }}" class="tf-button style3">{{ trans('home.blog.button') }}</a>

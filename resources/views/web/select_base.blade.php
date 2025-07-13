@@ -27,6 +27,9 @@
                                 </div>
                             @endforeach
                         </div>
+                        <!-- Navigation arrows -->
+                        <div class="swiper-button-next" style="margin-top: 40px;"></div>
+                        <div class="swiper-button-prev" style="margin-top: 40px;"></div>
                     </div>
                 </div>
             </div>
