@@ -31,6 +31,11 @@
                         <div class="swiper-button-next" style="margin-top: 40px;"></div>
                         <div class="swiper-button-prev" style="margin-top: 40px;"></div>
                     </div>
+                    <!-- Arrows positioned BELOW the Swiper -->
+                    <div class="swiper-nav-buttons">
+                        <div class="swiper-button-prev-custom"></div>
+                        <div class="swiper-button-next-custom"></div>
+                    </div>
                 </div>
             </div>
         </div>

@@ -53,7 +53,7 @@ document.addEventListener('DOMContentLoaded', function() {
     },
   });
 
-  var swiper = new Swiper(".blogSwiper", {
+  var blogSwiper = new Swiper(".blogSwiper", {
     
     navigation: {
       nextEl: ".swiper-button-next",
@@ -74,6 +74,55 @@ document.addEventListener('DOMContentLoaded', function() {
         spaceBetween: 30,
       },
     },
+  });
+
+  // Custom navigation for responsive design
+  document.addEventListener('DOMContentLoaded', function() {
+    const nextCustomBtn = document.querySelector('.swiper-button-next-custom');
+    const prevCustomBtn = document.querySelector('.swiper-button-prev-custom');
+    
+    // Function to update button states
+    function updateButtonStates() {
+      if (nextCustomBtn && prevCustomBtn) {
+        // Remove disabled classes
+        nextCustomBtn.classList.remove('swiper-button-disabled');
+        prevCustomBtn.classList.remove('swiper-button-disabled');
+        
+        // Check if at beginning
+        if (blogSwiper.isBeginning) {
+          prevCustomBtn.classList.add('swiper-button-disabled');
+        }
+        
+        // Check if at end
+        if (blogSwiper.isEnd) {
+          nextCustomBtn.classList.add('swiper-button-disabled');
+        }
+      }
+    }
+    
+    // Initial state
+    updateButtonStates();
+    
+    // Listen to slide change events
+    blogSwiper.on('slideChange', updateButtonStates);
+    blogSwiper.on('reachBeginning', updateButtonStates);
+    blogSwiper.on('reachEnd', updateButtonStates);
+    
+    if (nextCustomBtn) {
+      nextCustomBtn.addEventListener('click', function() {
+        if (!nextCustomBtn.classList.contains('swiper-button-disabled')) {
+          blogSwiper.slideNext();
+        }
+      });
+    }
+    
+    if (prevCustomBtn) {
+      prevCustomBtn.addEventListener('click', function() {
+        if (!prevCustomBtn.classList.contains('swiper-button-disabled')) {
+          blogSwiper.slidePrev();
+        }
+      });
+    }
   });
 
   

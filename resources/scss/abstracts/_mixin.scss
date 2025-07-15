@@ -131,6 +131,13 @@
         @content;
     }
 }
+
+@mixin res1700 {
+    @media only screen and (max-width: $res_1700) {
+        @content;
+    }
+}
+
 @mixin res1600 {
     @media only screen and (max-width: $res_1600) {
         @content;
