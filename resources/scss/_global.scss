@@ -660,6 +660,9 @@ form {
     top: 0;
     left: 0;
     z-index: 9999999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     -webkit-transition: all 0.3s ease-in-out;
     -moz-transition: all 0.3s ease-in-out;
     -ms-transition: all 0.3s ease-in-out;
@@ -668,12 +671,6 @@ form {
 }
 .clear-loading {
     text-align: center;
-    margin: 0 auto;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    margin-top: -50px;
-    margin-left: -50px;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     -ms-box-sizing: border-box;
@@ -683,6 +680,81 @@ form {
 .loading-effect-2 {
     width: 100px;
     height: 100px;
+}
+
+.loading-effect-new {
+    width: 200px;
+    height: 150px;
+}
+
+.professional-preloader {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.logo-container {
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.logo-ring {
+    width: 80px;
+    height: 80px;
+    border: 3px solid #f0f0f0;
+    border-top: 3px solid $color-hover;
+    border-radius: 50%;
+    animation: spin 1.5s linear infinite;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.inner-ring {
+    width: 50px;
+    height: 50px;
+    border: 2px solid transparent;
+    border-bottom: 2px solid #080f19;
+    border-radius: 50%;
+    animation: spin-reverse 1s linear infinite;
+}
+
+.loading-text {
+    font-family: $font-btn;
+    font-size: 16px;
+    font-weight: 500;
+    margin-bottom: 25px;
+    color: #080f19;
+    letter-spacing: 0.5px;
+    opacity: 0.8;
+}
+
+.progress-container {
+    width: 200px;
+    height: 4px;
+    background-color: #f0f0f0;
+    border-radius: 2px;
+    overflow: hidden;
+    position: relative;
+}
+
+.progress-bar {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.progress-fill {
+    height: 100%;
+    background: linear-gradient(90deg, $color-hover, #d4b896, $color-hover);
+    background-size: 200% 100%;
+    border-radius: 2px;
+    animation: progress-fill 2s ease-in-out infinite, gradient-shift 1.5s ease-in-out infinite;
+    width: 0%;
 }
 .loading-effect-2 > span,
 .loading-effect-2 > span:before,
@@ -752,5 +824,109 @@ form {
         -ms-transform: rotate(360deg);
         -o-transform: rotate(360deg);
         transform: rotate(360deg);
+    }
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes spin-reverse {
+    from {
+        transform: rotate(360deg);
+    }
+    to {
+        transform: rotate(0deg);
+    }
+}
+
+@keyframes progress-fill {
+    0% {
+        width: 0%;
+    }
+    50% {
+        width: 70%;
+    }
+    100% {
+        width: 100%;
+    }
+}
+
+@keyframes gradient-shift {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+// Responsive preloader styles
+@media (max-width: $res_767) {
+    .loading-effect-new {
+        width: 150px;
+        height: 120px;
+    }
+    
+    .logo-ring {
+        width: 60px;
+        height: 60px;
+    }
+    
+    .inner-ring {
+        width: 35px;
+        height: 35px;
+    }
+    
+    .loading-text {
+        font-size: 14px;
+        margin-bottom: 20px;
+    }
+    
+    .progress-container {
+        width: 150px;
+    }
+    
+    .logo-container {
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: $res_440) {
+    .loading-effect-new {
+        width: 120px;
+        height: 100px;
+    }
+    
+    .logo-ring {
+        width: 50px;
+        height: 50px;
+    }
+    
+    .inner-ring {
+        width: 30px;
+        height: 30px;
+    }
+    
+    .loading-text {
+        font-size: 12px;
+        margin-bottom: 15px;
+    }
+    
+    .progress-container {
+        width: 120px;
+        height: 3px;
+    }
+    
+    .logo-container {
+        margin-bottom: 15px;
     }
 }
