@@ -52,7 +52,7 @@
                 <div class="col-xl-8 col-md-12">
                     <div class="list-info">
                         <ul>
-                            <li><i class="fa fa-envelope-open"></i> Info@cafelarosa.dk</li>
+                            <li><i class="fa fa-envelope-open"></i> info@pauli-streetfood.de</li>
                             <li><i class="fa fa-map"></i> Reeperbahn 96, 20359 Hamburg, Tyskland</li>
                         </ul>
                     </div>
@@ -129,9 +129,9 @@
                         <p>
                             {{ trans('home.sidebar.description') }}
                         </p>
-                        <h4>+(45) 91 71 97 67</h4>
+                        <h4>+(49) 40 36036080</h4>
                         <p>Reeperbahn 96, 20359 Hamburg, Tyskland</p>
-                        <p>Info@cafelarosa.dk</p>
+                        <p>info@pauli-streetfood.de</p>
                         <div class="line"></div>
                         <p>{{ trans('home.sidebar.opening_hours.text') }} <br/>
                             {{ trans('home.sidebar.opening_hours.Monday') }} - {{ trans('home.sidebar.opening_hours.Friday') }} : 11:00 - 01:00 (nächster Tag),<br/>
@@ -195,9 +195,9 @@
                             <li>
                                     <span>{{ trans('home.footer.Booking_Contact') }}:
                                     </span>
-                                <p>Info@cafelarosa.dk
+                                <p>info@pauli-streetfood.de
                                 </p>
-                                <p>+(45) 91 71 97 67</p>
+                                <p>+(49) 40 36036080</p>
                             </li>
                         </ul>
                     </div>

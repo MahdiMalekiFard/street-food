@@ -43,8 +43,8 @@
                                 <div class="item" data-aos-duration="1000" data-aos="fade-up">
                                     <div class="icon"><i class="fa fa-phone-volume"></i></div>
                                     <h5>{{ trans('page.pages.contact.info.text-1') }}</h5>
-                                    <p>+(45) 91 71 97 67</p>
-                                    <p>Info@cafelarosa.dk</p>
+                                    <p>+(49) 40 36036080</p>
+                                    <p>info@pauli-streetfood.de</p>
 
                                 </div>
 

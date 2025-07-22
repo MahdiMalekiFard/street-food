@@ -63,7 +63,7 @@
                                         </div>
                                         <div class="left">
                                             <h6>{{ trans('slider.phone_text') }}</h6>
-                                            <h4>+(45) 91 71 97 67</h4>
+                                            <h4>+(49) 40 36036080</h4>
                                         </div>
                                     </div>
                                 </div>
@@ -421,10 +421,10 @@
                             <h3 class="title" data-aos-duration="1000" data-aos="fade-up">{{ trans('home.location.title') }} </h3>
                             <p class="text" data-aos-duration="1000" data-aos="fade-up">{{ trans('home.location.subtitle1') }}</p>
                             <h6 data-aos-duration="1000" data-aos="fade-up">{{ trans('home.location.subtitle2') }}:</h6>
-                            <h3 class="phone" data-aos-duration="1000" data-aos="fade-up">+(45) 91 71 97 67</h3>
+                            <h3 class="phone" data-aos-duration="1000" data-aos="fade-up">+(49) 40 36036080</h3>
                             <h6 data-aos-duration="1000" data-aos="fade-up">{{ trans('home.location.subtitle3') }}:</h6>
                             <p class="mb-6" data-aos-duration="1000" data-aos="fade-up"><span>{{ trans('home.location.address') }}:</span> Reeperbahn 96, 20359 Hamburg, Tyskland</p>
-                            <p class="mb-6" data-aos-duration="1000" data-aos="fade-up"><span>{{ trans('home.location.mail') }}:</span> Info@cafelarosa.dk</p>
+                            <p class="mb-6" data-aos-duration="1000" data-aos="fade-up"><span>{{ trans('home.location.mail') }}:</span> info@pauli-streetfood.de</p>
                             <a href="{{ route('contact-us-page', ['locale' => app()->getLocale()]) }}" class="tf-button style3">{{ trans('home.location.button') }}</a>
                         </div>
                     </div>
