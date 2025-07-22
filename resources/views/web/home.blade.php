@@ -271,6 +271,7 @@
                                                 <li>{{ trans('home.choose_us.list3.one') }}</li>
                                                 <li>{{ trans('home.choose_us.list3.two') }}</li>
                                                 <li>{{ trans('home.choose_us.list3.three') }}</li>
+                                                <li>{{ trans('home.choose_us.list3.four') }}</li>
                                             </ul>
                                             <a href="{{ route('about-us', ['locale' => app()->getLocale()]) }}" class="tf-button style3">{{ trans('home.choose_us.button') }}</a>
                                         </div>

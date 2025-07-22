@@ -24,15 +24,15 @@ return [
             'services' => [
                 'service1' => [
                     'title' => 'Das Essen ist immer frisch',
-                    'desc'  => 'Das von uns ausgewählte Essen ist stets frisch und wird vor der Zubereitung sorgfältig kontrolliert.',
+                    'desc'  => 'Die von uns servierten Gerichte werden mit Sorgfalt aus hochwertigen, aufgrund ihrer Frische ausgewählten Zutaten zubereitet.',
                 ],
                 'service2' => [
                     'title' => 'Luxuriöse Räume und Musik',
-                    'desc'  => 'Was gibt es Schöneres, als köstliches Essen und Musik gleichzeitig zu genießen?',
+                    'desc'  => 'Nichts geht über die Freude an leckeren Häppchen und guter Musik – alles an einem Ort.',
                 ],
                 'service3' => [
                     'title' => 'Vielfältige Speisekarte',
-                    'desc'  => 'Das Essen im Restaurant ist köstlich und vielfältig.',
+                    'desc'  => 'Aromen, die Sie lieben werden, mit Optionen für jeden Geschmack.',
                 ],
             ]
         ],
