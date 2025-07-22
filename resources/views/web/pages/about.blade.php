@@ -153,69 +153,95 @@
         @endphp
 
         @if($base)
-            <div class="gallery-ig">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-12">
-                            <div class="gallery-ig-main">
-                                @php
-                                    $medias = collect($artGalleries)->where('base_id', $base?->id)->flatMap(function ($artGallery) {
-                                    return $artGallery?->getMedia('gallery') ?? [];
-                                    });
-                                    $mediasCount = $medias->count();
-                                @endphp
+            @php
+                $medias = collect($artGalleries)->where('base_id', $base?->id)->flatMap(function ($artGallery) {
+                return $artGallery?->getMedia('gallery') ?? [];
+                });
+                $mediasCount = $medias->count();
+            @endphp
 
-                                @if($mediasCount <= 4)
-                                    @foreach($medias ?? [] as $media)
+            @if($mediasCount == 0)
+                <section class="m-video">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="video-main">
+                                    <a href="/videos/video2.mp4" class="popup-youtube wrap-video">
+                                        <i class="fa fa-play"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            @else
+                <div class="gallery-ig">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="gallery-ig-main">
+                                    @if($mediasCount <= 4)
+                                        @foreach($medias ?? [] as $media)
+                                            <div class="col-img">
+                                                <div class="ig-box">
+                                                    <img src="{{ $media?->getUrl() }}" alt="">
+                                                </div>
+                                            </div>
+                                        @endforeach
+
+                                    @elseif($mediasCount >= 5)
                                         <div class="col-img">
                                             <div class="ig-box">
-                                                <img src="{{ $media?->getUrl() }}" alt="">
+                                                <img src="{{ $medias[0]->getUrl() }}" alt="">
                                             </div>
                                         </div>
-                                    @endforeach
 
-                                @elseif($mediasCount >= 5)
-                                    <div class="col-img">
-                                        <div class="ig-box">
-                                            <img src="{{ $medias[0]->getUrl() }}" alt="">
+                                        <div class="col-img">
+                                            <div class="top">
+                                                <div class="ig-box">
+                                                    <img src="{{ $medias[1]->getUrl() }}" alt="">
+                                                </div>
+                                                <div class="ig-box">
+                                                    <img src="{{ $medias[2]->getUrl() }}" alt="">
+                                                </div>
+                                            </div>
+                                            <div class="bottom">
+                                                <div class="ig-box">
+                                                    <img src="{{ $medias[3]->getUrl() }}" alt="">
+                                                </div>
+                                            </div>
                                         </div>
-                                    </div>
+                                        <div class="col-img">
+                                            <div class="ig-box">
+                                                <img src="{{ $medias[4]->getUrl() }}" alt="">
+                                            </div>
+                                        </div>
+                                    @endif
+                                </div>
 
-                                    <div class="col-img">
-                                        <div class="top">
-                                            <div class="ig-box">
-                                                <img src="{{ $medias[1]->getUrl() }}" alt="">
-                                            </div>
-                                            <div class="ig-box">
-                                                <img src="{{ $medias[2]->getUrl() }}" alt="">
-                                            </div>
-                                        </div>
-                                        <div class="bottom">
-                                            <div class="ig-box">
-                                                <img src="{{ $medias[3]->getUrl() }}" alt="">
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-img">
-                                        <div class="ig-box">
-                                            <img src="{{ $medias[4]->getUrl() }}" alt="">
-                                        </div>
-                                    </div>
-                                @endif
-                            </div>
-
-                            @if($mediasCount)
                                 <div class="center mt-50">
                                     <a href="{{ route('gallery-list', ['locale' => app()->getLocale(), 'base' => $base?->slug]) }}" class="tf-button style3">view all gallery</a>
                                 </div>
-                            @endif
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
+            @endif
+            
         @else
-            <div class="gallery-ig">
-            </div>
+            <section class="m-video">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="video-main">
+                                <a href="/videos/video2.mp4" class="popup-youtube wrap-video">
+                                    <i class="fa fa-play"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
         @endif
     </div>
 @endsection
