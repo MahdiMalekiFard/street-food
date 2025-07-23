@@ -11453,6 +11453,25 @@ img.mfp-img {
     letter-spacing: 0.4px;
 }
 
+/* Mobile styles */
+@media (max-width: 768px) {
+    .base-toggle {
+        width: 56px;
+        height: 56px;
+        border-radius: 50%;
+        padding: 0;
+    }
+    
+    .base-toggle .icon {
+        margin-right: 0;
+        font-size: 20px;
+    }
+    
+    .base-toggle .label {
+        display: none;
+    }
+}
+
 /* Dropdown menu — same width as button */
 .base-links {
     position: absolute;

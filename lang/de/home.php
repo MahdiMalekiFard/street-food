@@ -64,7 +64,7 @@ return [
 
     'choose_us' => [
         'text'   => 'Warum uns wählen',
-        'title'  => 'Wir möchten stets zufriedene Gäste',
+        'title'  => 'Die Zufriedenheit unserer Gäste hat für uns oberste Priorität.',
         'button' => 'Mehr erfahren',
         'next'   => 'Weiter',
         'image'  => 'Bild',
@@ -106,9 +106,9 @@ return [
 
     'location' => [
         'text'      => 'Standort',
-        'title'     => 'Wie Sie uns finden',
+        'title'     => 'So erreichen Sie uns',
         'subtitle1' => 'Es ist wichtig, die Adresse zu kennen – unten finden Sie Adresse und Kontaktinfo zu St.Pauli Street Food',
-        'subtitle2' => 'Rufen Sie an, um einen Tisch zu reservieren & Lieferung zu bestellen',
+        'subtitle2' => 'Rufen Sie uns an, um Ihren Platz zu reservieren oder unser Essen zu Hause zu genießen',
         'subtitle3' => 'Restaurantinformationen',
         'address'   => 'Adresse',
         'mail'      => 'E-Mail',
